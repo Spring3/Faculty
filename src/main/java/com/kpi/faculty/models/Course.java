@@ -3,14 +3,17 @@ package com.kpi.faculty.models;
 /**
  * Created by user on 6/26/2015.
  */
-public class Subject {
+public class Course {
 
     private int id;
     private String name;
-    private Teacher teacher;
+    private Human teacher;
 
+    public Course(){
 
-    public Subject(String name, Teacher teacher){
+    }
+
+    public Course(String name, Teacher teacher){
         setName(name);
         setTeacher(teacher);
     }
@@ -31,12 +34,17 @@ public class Subject {
         this.name = name;
     }
 
-    public Teacher getTeacher() {
+    public Human getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(Teacher teacher) {
+    public void setTeacher(Human teacher) {
         this.teacher = teacher;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 
     @Override
@@ -44,24 +52,19 @@ public class Subject {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Subject subject = (Subject) o;
+        Course course = (Course) o;
 
-        if (getId() != subject.getId()) return false;
-        if (!getName().equals(subject.getName())) return false;
-        return getTeacher().equals(subject.getTeacher());
+        if (getId() != course.getId()) return false;
+        if (getName() != null ? !getName().equals(course.getName()) : course.getName() != null) return false;
+        return !(getTeacher() != null ? !getTeacher().equals(course.getTeacher()) : course.getTeacher() != null);
 
     }
 
     @Override
     public int hashCode() {
         int result = getId();
-        result = 31 * result + getName().hashCode();
-        result = 31 * result + getTeacher().hashCode();
+        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+        result = 31 * result + (getTeacher() != null ? getTeacher().hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return getName();
     }
 }

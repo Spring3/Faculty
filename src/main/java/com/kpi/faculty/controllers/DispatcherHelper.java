@@ -1,6 +1,8 @@
 package com.kpi.faculty.controllers;
 
 import com.kpi.faculty.commands.ICommand;
+import com.kpi.faculty.commands.LoginCommand;
+import com.kpi.faculty.commands.RegisterCommand;
 import com.kpi.faculty.commands.UnknownCommand;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +19,8 @@ public final class DispatcherHelper {
     private DispatcherHelper(){
         //putting all commands variants here
         commands = new HashMap<String, ICommand>();
+        commands.put("login", new LoginCommand());
+        commands.put("register", new RegisterCommand());
 
     }
 

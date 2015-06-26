@@ -9,9 +9,14 @@ public class Config {
 
     private static Config instance;
     private ResourceBundle configFile;
-    private static final String BUNDLE_NAME = "com.kpi.faculty.util.config";
+    private static final String BUNDLE_NAME = "config";
     public static final String DRIVER = "DRIVER";
     public static final String URL = "URL";
+    public static final String LOGIN = "LOGIN";
+    public static final String REGISTER = "REGISTER";
+    public static final String PROFILE = "PROFILE";
+    public static final String COURSES = "COURSES";
+    public static final String LOBBY = "LOBBY";
 
     private Config(){
         configFile = ResourceBundle.getBundle(BUNDLE_NAME);
@@ -31,4 +36,5 @@ public class Config {
     public String getValue(String key){
         return configFile.getString(key);
     }
+
 }

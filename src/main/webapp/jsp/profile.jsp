@@ -8,9 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title></title>
+    <title>Profile</title>
   </head>
+  <h2>Welcome, <%= request.getAttribute("username")%></h2>
   <body>
+  <br>
+    <form action="/dispatcher" method="post">
+      <input type="submit" value="Log out"/>
+      <input type="hidden" name="command" value="logout"/>
+    </form>
+
 
   </body>
 </html>
