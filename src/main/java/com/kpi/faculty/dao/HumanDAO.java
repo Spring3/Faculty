@@ -54,7 +54,7 @@ public class HumanDAO implements IDAO<Human>{
             Connection connection = connectionPool.getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM HUMAN WHERE username = ?;");
             statement.setString(1, username);
-            return getBy(statement);
+            return getBy(statement, connection);
         }
         catch (SQLException ex){
             ex.printStackTrace();
@@ -68,7 +68,7 @@ public class HumanDAO implements IDAO<Human>{
             Connection connection = connectionPool.getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM HUMAN WHERE id = ?;");
             statement.setInt(1, id);
-            return getBy(statement);
+            return getBy(statement, connection);
         }
         catch (SQLException ex){
             ex.printStackTrace();
@@ -116,13 +116,14 @@ public class HumanDAO implements IDAO<Human>{
     public boolean update(Human value) {
         try{
             Connection connection = connectionPool.getConnection();
-            PreparedStatement statement = connection.prepareStatement("UPDATE HUMAN SET id = ?, name = ?, lastname = ?, username = ?, password = ?, role = ?;");
+            PreparedStatement statement = connection.prepareStatement("UPDATE HUMAN SET id = ?, name = ?, lastname = ?, username = ?, password = ?, role = ? WHERE id = ?;");
             statement.setInt(1, value.getId());
             statement.setString(2, value.getName());
             statement.setString(3, value.getLastName());
             statement.setString(4, value.getUsername());
             statement.setString(5, value.getPassword());
             statement.setString(6, value.getRole().name());
+            statement.setInt(7, value.getId());
             statement.executeUpdate();
             connectionPool.closeConnection(connection);
             return true;
@@ -134,10 +135,9 @@ public class HumanDAO implements IDAO<Human>{
         return false;
     }
 
-    private Human getBy(PreparedStatement statement){
+    private Human getBy(PreparedStatement statement, Connection connection){
         try{
             Human humanBuffer = null;
-            Connection connection = statement.getConnection();
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()){
                 String role = resultSet.getString(6);

@@ -13,7 +13,7 @@ public class Course {
 
     }
 
-    public Course(String name, Teacher teacher){
+    public Course(String name, Human teacher){
         setName(name);
         setTeacher(teacher);
     }

@@ -1,5 +1,6 @@
 package com.kpi.faculty.util;
 
+import com.sun.jndi.ldap.pool.Pool;
 import org.apache.log4j.Logger;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
@@ -14,13 +15,13 @@ import java.sql.SQLException;
 public class ConnectionPool {
     private static ConnectionPool pool;
     private DataSource dataSource;
-    private PoolProperties poolProperties;
+    private static boolean dbChecked = false;
 
     private static final Logger logger = Logger.getLogger(ConnectionPool.class);
 
-    public ConnectionPool(){
+    private ConnectionPool(){
         Config config = Config.getInstance();
-        poolProperties = new PoolProperties();
+        PoolProperties poolProperties = new PoolProperties();
         poolProperties.setUrl(config.getValue(Config.URL));
         poolProperties.setDriverClassName(config.getValue(Config.DRIVER));
         poolProperties.setMaxIdle(3);
@@ -44,7 +45,8 @@ public class ConnectionPool {
             synchronized (Object.class){
                 if (pool == null){
                     pool = new ConnectionPool();
-                    intitDb();
+                    if (!dbChecked)
+                        intitDb();
                 }
             }
         }
@@ -75,5 +77,6 @@ public class ConnectionPool {
             ex.printStackTrace();
             logger.error(ex.getMessage());
         }
+        dbChecked = true;
     }
 }

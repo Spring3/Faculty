@@ -110,7 +110,7 @@ public class CourseDAO implements IDAO<Course> {
             Connection connection = connectionPool.getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM COURSE WHERE name = ?;");
             statement.setString(1, name);
-            return getBy(statement);
+            return getBy(statement, connection);
         }
         catch (SQLException ex){
             ex.printStackTrace();
@@ -157,6 +157,25 @@ public class CourseDAO implements IDAO<Course> {
             PreparedStatement statement = connection.prepareStatement("INSERT INTO COURSE_STUDENT (course_id, student_id, mark, feedback) VALUES (?, ?, ?, ?);");
             statement.setInt(1, course.getId());
             statement.setInt(2, human.getId());
+            statement.setString(3, null);
+            statement.setString(4, null);
+            statement.execute();
+            connectionPool.closeConnection(connection);
+            return true;
+        }
+        catch (SQLException ex){
+            ex.printStackTrace();
+            logger.error(ex.getMessage());
+        }
+        return false;
+    }
+
+    public boolean unenroll(Course course, Human human){
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement = connection.prepareStatement("DELETE FROM COURSE_STUDENT WHERE course_id = ? AND student_id = ?;");
+            statement.setInt(1, course.getId());
+            statement.setInt(2, human.getId());
             statement.execute();
             connectionPool.closeConnection(connection);
             return true;
@@ -171,10 +190,11 @@ public class CourseDAO implements IDAO<Course> {
     public boolean update(Course value) {
         try{
             Connection connection = connectionPool.getConnection();
-            PreparedStatement statement = connection.prepareStatement("UPDATE COURSE SET id = ?, name = ?, teacher_id = ?;");
+            PreparedStatement statement = connection.prepareStatement("UPDATE COURSE SET id = ?, name = ?, teacher_id = ? WHERE id = ?;");
             statement.setInt(1, value.getId());
             statement.setString(2, value.getName());
             statement.setInt(3, value.getTeacher().getId());
+            statement.setInt(4, value.getId());
             statement.executeUpdate();
             connectionPool.closeConnection(connection);
             return true;
@@ -186,11 +206,10 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
-    private Course getBy(Statement statement){
+    private Course getBy(PreparedStatement statement, Connection connection){
         try{
             Course courseBuffer = new Course();
-            Connection connection = statement.getConnection();
-            ResultSet resultSet = statement.getResultSet();
+            ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()){
                 courseBuffer.setId(resultSet.getInt(1));
                 courseBuffer.setName(resultSet.getString(2));
