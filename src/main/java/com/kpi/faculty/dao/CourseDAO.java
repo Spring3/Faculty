@@ -73,13 +73,12 @@ public class CourseDAO implements IDAO<Course> {
             Connection connection = connectionPool.getConnection();
             PreparedStatement statement;
             if (student.getId() == 0){
-                statement = connection.prepareStatement("SELECT course_id FROM HUMAN as h INNER JOIN COURSE_STUDENT as c ON h.id = c.student_id WHERE h.username <=> ? GROUP BY c.course_id ;");
+                statement = connection.prepareStatement("SELECT c.id FROM COURSE AS c WHERE c.id NOT IN(SELECT cs.course_id FROM HUMAN AS h LEFT JOIN COURSE_STUDENT AS cs ON cs.student_id = h.id WHERE h.username = ? AND cs.course_id IS NOT NULL GROUP BY course_id);");
                 statement.setString(1, student.getUsername());
             }
             else{
-                statement = connection.prepareStatement("SELECT course_id FROM COURSE_STUDENT WHERE student_id <=> ? GROUP BY course_id;");
+                statement = connection.prepareStatement("SELECT c.id FROM COURSE AS c WHERE c.id NOT IN(SELECT cs.course_id FROM HUMAN AS h LEFT JOIN COURSE_STUDENT AS cs ON cs.student_id = ? WHERE cs.course_id IS NOT NULL GROUP BY course_id);;");
                 statement.setInt(1, student.getId());
-
             }
 
             ResultSet resultSet = statement.executeQuery();
@@ -110,7 +109,35 @@ public class CourseDAO implements IDAO<Course> {
             else{
                 statement = connection.prepareStatement("SELECT course_id FROM COURSE_STUDENT WHERE student_id = ?;");
                 statement.setInt(1, human.getId());
+            }
 
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                resultList.add(get(resultSet.getInt(1)));
+            }
+            connectionPool.closeConnection(connection);
+
+        }
+        catch(SQLException ex){
+            logger.error(ex.getMessage());
+            ex.printStackTrace();
+        }
+        return resultList;
+    }
+
+    public List<Course> getAllCoursesOf(Human teacher){
+        List<Course> resultList = new ArrayList<Course>();
+
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement;
+            if (teacher.getId() == 0){
+                statement = connection.prepareStatement("SELECT c.id FROM COURSE as c INNER JOIN HUMAN as h ON h.id = c.teacher_id WHERE h.username = ?;");
+                statement.setString(1, teacher.getUsername());
+            }
+            else{
+                statement = connection.prepareStatement("SELECT id FROM COURSE WHERE teacher_id = ?;");
+                statement.setInt(1, teacher.getId());
             }
 
             ResultSet resultSet = statement.executeQuery();
@@ -246,6 +273,8 @@ public class CourseDAO implements IDAO<Course> {
 
     //Enroll a student on course
     public boolean enroll(Course course, Human human){
+        if (isEnrolled(human, course))
+            return false;
         try{
             Connection connection = connectionPool.getConnection();
             PreparedStatement statement = connection.prepareStatement("INSERT INTO COURSE_STUDENT (course_id, student_id, mark, feedback) VALUES (?, ?, ?, ?);");
@@ -262,6 +291,23 @@ public class CourseDAO implements IDAO<Course> {
             logger.error(ex.getMessage());
         }
         return false;
+    }
+
+    private boolean isEnrolled(Human student, Course course){
+        boolean result = false;
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT course_id FROM COURSE_STUDENT WHERE student_id = ? AND course_id = ?");
+            statement.setInt(1, student.getId());
+            statement.setInt(2, course.getId());
+            result = statement.executeQuery().next();
+            connectionPool.closeConnection(connection);
+        }
+        catch (SQLException ex){
+            logger.error(ex.getMessage());
+            ex.printStackTrace();
+        }
+        return result;
     }
 
     //Unenroll from a course

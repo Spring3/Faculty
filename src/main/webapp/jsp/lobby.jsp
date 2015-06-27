@@ -4,8 +4,7 @@
 <html>
   <head>
     <%
-      request.setCharacterEncoding("UTF-8");
-       String courseName = (String)request.getAttribute("course");
+       String courseName = request.getParameter("course");
     %>
     <title><%= courseName%></title>
   </head>

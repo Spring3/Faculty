@@ -1,9 +1,6 @@
 package com.kpi.faculty.controllers;
 
-import com.kpi.faculty.commands.ICommand;
-import com.kpi.faculty.commands.LoginCommand;
-import com.kpi.faculty.commands.RegisterCommand;
-import com.kpi.faculty.commands.UnknownCommand;
+import com.kpi.faculty.commands.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -21,6 +18,10 @@ public final class DispatcherHelper {
         commands = new HashMap<String, ICommand>();
         commands.put("login", new LoginCommand());
         commands.put("register", new RegisterCommand());
+        commands.put("enroll", new EnrollCommand());
+        commands.put("unenroll", new UnenrollCommand());
+        commands.put("addCourse", new AddCourseCommand());
+        commands.put("logout", new LogoutCommand());
 
     }
 

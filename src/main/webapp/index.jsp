@@ -4,7 +4,6 @@
 <%@ page pageEncoding="UTF-8" %>
 <html>
 <%
-  request.setCharacterEncoding("UTF-8");
   Locale.setDefault(Locale.ENGLISH);
   if (session.getAttribute("username") == null){
   }
@@ -27,14 +26,16 @@
       }
     %>
     <form action="/dispatcher" method="post">
+      <label>Username: </label>
       <input type="text" name="username" placeholder="Username"/>
       <br>
+      <label>Password: </label>
       <input type="password" name="password" placeholder="Password"/>
       <br>
       <input type="hidden" name="command" value="login"/>
       <br>
       <input type="submit" value="Sign in"/>
-      <a href="/jsp/reg.jsp"><input type="button" value="Sign up"/></a>
+      <a href="./jsp/reg.jsp"><input type="button" value="Sign up"/></a>
     </form>
 
 

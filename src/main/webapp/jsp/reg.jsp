@@ -8,7 +8,6 @@
   <body>
 
     <%
-      request.setCharacterEncoding("UTF-8");
       if (session.getAttribute("username") == null){
       }
       else {

@@ -24,133 +24,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="CoursesDAOTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/CoursesDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+              <caret line="49" column="70" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CourseDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.599359">
+              <caret line="309" column="21" selection-start-line="309" selection-start-column="21" selection-end-line="309" selection-end-column="21" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#800#808#0" expanded="true" />
                 <element signature="e#1781#1797#0" expanded="true" />
                 <element signature="e#2523#2531#0" expanded="true" />
-                <element signature="e#3747#3755#0" expanded="true" />
-                <element signature="method#get#0;class#CourseDAO#0" expanded="false" />
-                <element signature="method#get#1;class#CourseDAO#0" expanded="false" />
+                <element signature="e#3930#3938#0" expanded="true" />
+                <element signature="e#5042#5050#0" expanded="true" />
                 <element signature="method#create#0;class#CourseDAO#0" expanded="false" />
-                <element signature="method#remove#0;class#CourseDAO#0" expanded="false" />
-                <element signature="method#update#0;class#CourseDAO#0" expanded="false" />
-                <element signature="method#getBy#0;class#CourseDAO#0" expanded="false" />
-                <marker date="1435431608031" expanded="true" signature="965:985" placeholder="SELECT * FRO..COURSE..." />
-                <marker date="1435431608031" expanded="true" signature="2754:2884" placeholder="SELECT cours..HUMAN..." />
-                <marker date="1435431608031" expanded="true" signature="3042:3120" placeholder="SELECT cours..COURSE_STUDENT..." />
-                <marker date="1435431608031" expanded="true" signature="3976:4083" placeholder="SELECT cours..HUMAN..." />
-                <marker date="1435431608031" expanded="true" signature="4238:4295" placeholder="SELECT cours..COURSE_STUDENT..." />
-                <marker date="1435431608031" expanded="true" signature="5216:5290" placeholder="SELECT feedb..COURSE_STUDENT..." />
-                <marker date="1435431608031" expanded="true" signature="6264:6334" placeholder="SELECT mark ..COURSE_STUDENT..." />
-                <marker date="1435431608031" expanded="true" signature="7075:7110" placeholder="SELECT * FRO..COURSE..." />
-                <marker date="1435431608031" expanded="true" signature="7547:7580" placeholder="SELECT * FRO..COURSE..." />
-                <marker date="1435431608031" expanded="true" signature="8064:8115" placeholder="INSERT INTO ..." />
-                <marker date="1435431608031" expanded="true" signature="8746:8777" placeholder="DELETE FROM ..." />
-                <marker date="1435431608031" expanded="true" signature="9349:9435" placeholder="INSERT INTO ..." />
-                <marker date="1435431608031" expanded="true" signature="10132:10197" placeholder="DELETE FROM ..." />
-                <marker date="1435431608031" expanded="true" signature="10793:10856" placeholder="UPDATE COURS..." />
+                <marker date="1435447127007" expanded="true" signature="965:985" placeholder="SELECT * FRO..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="2754:2783" placeholder="SELECT c.id ..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="2754:2961" placeholder="SELECT c.id ..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="2801:2960" placeholder="SELECT cs.co..HUMAN..." />
+                <marker date="1435447127007" expanded="true" signature="3118:3147" placeholder="SELECT c.id ..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="3118:3303" placeholder="SELECT c.id ..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="3118:3304" placeholder="SELECT c.id ..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="3165:3302" placeholder="SELECT cs.co..HUMAN..." />
+                <marker date="1435447127007" expanded="true" signature="4159:4266" placeholder="SELECT cours..HUMAN..." />
+                <marker date="1435447127007" expanded="true" signature="4421:4478" placeholder="SELECT cours..COURSE_STUDENT..." />
+                <marker date="1435447127007" expanded="true" signature="5273:5367" placeholder="SELECT c.id ..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="5524:5566" placeholder="SELECT id FR..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="6488:6562" placeholder="SELECT feedb..COURSE_STUDENT..." />
+                <marker date="1435447127007" expanded="true" signature="7536:7606" placeholder="SELECT mark ..COURSE_STUDENT..." />
+                <marker date="1435447127007" expanded="true" signature="8347:8382" placeholder="SELECT * FRO..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="8819:8852" placeholder="SELECT * FRO..COURSE..." />
+                <marker date="1435447127007" expanded="true" signature="9336:9387" placeholder="INSERT INTO ..." />
+                <marker date="1435447127007" expanded="true" signature="10018:10049" placeholder="DELETE FROM ..." />
+                <marker date="1435447127007" expanded="true" signature="10686:10772" placeholder="INSERT INTO ..." />
+                <marker date="1435447127007" expanded="true" signature="11477:11534" placeholder="SELECT cours..COURSE_STUDENT..." />
+                <marker date="1435447127007" expanded="true" signature="11477:11552" placeholder="SELECT cours..COURSE_STUDENT..." />
+                <marker date="1435447127007" expanded="true" signature="12163:12228" placeholder="DELETE FROM ..." />
+                <marker date="1435447127007" expanded="true" signature="12824:12887" placeholder="UPDATE COURS..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HumanDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/HumanDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#739#746#0" expanded="true" />
-                <element signature="e#1965#1972#0" expanded="true" />
-                <element signature="method#get#0;class#HumanDAO#0" expanded="false" />
-                <element signature="method#get#1;class#HumanDAO#0" expanded="false" />
-                <element signature="method#remove#0;class#HumanDAO#0" expanded="false" />
-                <element signature="method#update#0;class#HumanDAO#0" expanded="false" />
-                <element signature="method#getBy#0;class#HumanDAO#0" expanded="false" />
-                <marker date="1435413676667" expanded="true" signature="903:922" placeholder="SELECT * FRO..HUMAN..." />
-                <marker date="1435413676667" expanded="true" signature="2173:2230" placeholder="SELECT stude..COURSE_STUDENT..." />
-                <marker date="1435413676667" expanded="true" signature="2905:2943" placeholder="SELECT * FRO..HUMAN..." />
-                <marker date="1435413676667" expanded="true" signature="3407:3439" placeholder="SELECT * FRO..HUMAN..." />
-                <marker date="1435413676667" expanded="true" signature="3913:3996" placeholder="INSERT INTO ..." />
-                <marker date="1435413676667" expanded="true" signature="4787:4817" placeholder="DELETE FROM ..." />
-                <marker date="1435413676667" expanded="true" signature="5383:5481" placeholder="UPDATE HUMAN..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3207547">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DispatcherHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthVerification.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/filters/AuthVerification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15289256">
-              <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courses.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2452831">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reg.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6415094">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -159,12 +79,82 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConnectionPool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="131" selection-start-line="67" selection-start-column="131" selection-end-line="67" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lobby.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.490566">
+              <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courses.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.769231">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnrollCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/EnrollCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
-                <element signature="e#793#794#0" expanded="true" />
-                <element signature="e#816#817#0" expanded="true" />
-                <element signature="method#processRequest#0;class#DispatcherServlet#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddCourseCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/AddCourseCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.2452831">
+              <caret line="37" column="28" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,26 +189,31 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/ICommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/LoginCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnknownCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/IDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Course.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Human.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Teacher.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/Config.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CoursesDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RegisterCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/HumanDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/filters/AuthVerification.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/LogoutCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/EnrollCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnenrollCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RegisterCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/AddCourseCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RedirectCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/CoursesDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java" />
       </list>
     </option>
   </component>
@@ -672,6 +667,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14160156" />
     <property name="project.structure.side.proportion" value="0.26629835" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -763,6 +760,17 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CBConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="HTTP_PORT_X" value="8080" />
+        <option name="JNDI_PORT" value="1099" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -1055,16 +1063,16 @@
       <updated>1435263875592</updated>
       <workItem from="1435263877700" duration="5989000" />
       <workItem from="1435314776514" duration="31656000" />
-      <workItem from="1435400157238" duration="20384000" />
+      <workItem from="1435400157238" duration="33571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58029000" />
+    <option name="totallyTimeSpent" value="71216000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1073,21 +1081,21 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35620916" sideWeight="0.5060514" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21709532" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3888889" sideWeight="0.49394855" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44444445" sideWeight="0.49394855" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19364598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1633987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54901963" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1126,15 +1134,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/HumanDAO.java</url>
-          <line>108</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1143,43 +1143,41 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/CoursesDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="47" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="195" column="46" selection-start-line="195" selection-start-column="46" selection-end-line="195" selection-end-column="46" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#800#808#0" expanded="true" />
             <element signature="e#1781#1797#0" expanded="true" />
             <element signature="e#2523#2531#0" expanded="true" />
-            <element signature="e#3747#3755#0" expanded="true" />
-            <element signature="method#get#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#get#1;class#CourseDAO#0" expanded="false" />
+            <element signature="e#3930#3938#0" expanded="true" />
+            <element signature="e#5042#5050#0" expanded="true" />
             <element signature="method#create#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#remove#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#update#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#getBy#0;class#CourseDAO#0" expanded="false" />
-            <marker date="1435431608031" expanded="true" signature="965:985" placeholder="SELECT * FRO..COURSE..." />
-            <marker date="1435431608031" expanded="true" signature="2754:2884" placeholder="SELECT cours..HUMAN..." />
-            <marker date="1435431608031" expanded="true" signature="3042:3120" placeholder="SELECT cours..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="3976:4083" placeholder="SELECT cours..HUMAN..." />
-            <marker date="1435431608031" expanded="true" signature="4238:4295" placeholder="SELECT cours..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="5216:5290" placeholder="SELECT feedb..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="6264:6334" placeholder="SELECT mark ..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="7075:7110" placeholder="SELECT * FRO..COURSE..." />
-            <marker date="1435431608031" expanded="true" signature="7547:7580" placeholder="SELECT * FRO..COURSE..." />
-            <marker date="1435431608031" expanded="true" signature="8064:8115" placeholder="INSERT INTO ..." />
-            <marker date="1435431608031" expanded="true" signature="8746:8777" placeholder="DELETE FROM ..." />
-            <marker date="1435431608031" expanded="true" signature="9349:9435" placeholder="INSERT INTO ..." />
-            <marker date="1435431608031" expanded="true" signature="10132:10197" placeholder="DELETE FROM ..." />
-            <marker date="1435431608031" expanded="true" signature="10793:10856" placeholder="UPDATE COURS..." />
+            <marker date="1435447127007" expanded="true" signature="965:985" placeholder="SELECT * FRO..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="2754:2783" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="2754:2961" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="2801:2960" placeholder="SELECT cs.co..HUMAN..." />
+            <marker date="1435447127007" expanded="true" signature="3118:3147" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="3118:3303" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="3118:3304" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="3165:3302" placeholder="SELECT cs.co..HUMAN..." />
+            <marker date="1435447127007" expanded="true" signature="4159:4266" placeholder="SELECT cours..HUMAN..." />
+            <marker date="1435447127007" expanded="true" signature="4421:4478" placeholder="SELECT cours..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="5273:5367" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="5524:5566" placeholder="SELECT id FR..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="6488:6562" placeholder="SELECT feedb..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="7536:7606" placeholder="SELECT mark ..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="8347:8382" placeholder="SELECT * FRO..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="8819:8852" placeholder="SELECT * FRO..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="9336:9387" placeholder="INSERT INTO ..." />
+            <marker date="1435447127007" expanded="true" signature="10018:10049" placeholder="DELETE FROM ..." />
+            <marker date="1435447127007" expanded="true" signature="10686:10772" placeholder="INSERT INTO ..." />
+            <marker date="1435447127007" expanded="true" signature="11477:11534" placeholder="SELECT cours..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="11477:11552" placeholder="SELECT cours..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="12163:12228" placeholder="DELETE FROM ..." />
+            <marker date="1435447127007" expanded="true" signature="12824:12887" placeholder="UPDATE COURS..." />
           </folding>
         </state>
       </provider>
@@ -1201,17 +1199,15 @@
             <element signature="e#739#746#0" expanded="true" />
             <element signature="e#1965#1972#0" expanded="true" />
             <element signature="method#get#0;class#HumanDAO#0" expanded="false" />
-            <element signature="method#get#1;class#HumanDAO#0" expanded="false" />
             <element signature="method#remove#0;class#HumanDAO#0" expanded="false" />
             <element signature="method#update#0;class#HumanDAO#0" expanded="false" />
-            <element signature="method#getBy#0;class#HumanDAO#0" expanded="false" />
-            <marker date="1435413676667" expanded="true" signature="903:922" placeholder="SELECT * FRO..HUMAN..." />
-            <marker date="1435413676667" expanded="true" signature="2173:2230" placeholder="SELECT stude..COURSE_STUDENT..." />
-            <marker date="1435413676667" expanded="true" signature="2905:2943" placeholder="SELECT * FRO..HUMAN..." />
-            <marker date="1435413676667" expanded="true" signature="3407:3439" placeholder="SELECT * FRO..HUMAN..." />
-            <marker date="1435413676667" expanded="true" signature="3913:3996" placeholder="INSERT INTO ..." />
-            <marker date="1435413676667" expanded="true" signature="4787:4817" placeholder="DELETE FROM ..." />
-            <marker date="1435413676667" expanded="true" signature="5383:5481" placeholder="UPDATE HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT stude..COURSE_STUDENT..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="UPDATE HUMAN..." />
           </folding>
         </state>
       </provider>
@@ -1426,74 +1422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/ICommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnknownCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/LoginCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RegisterCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CoursesDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="92" selection-start-line="58" selection-start-column="92" selection-end-line="58" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6415094">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3207547">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1506,30 +1438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2452831">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6415094">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4275862">
@@ -1538,47 +1446,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/filters/AuthVerification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnknownCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnenrollCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
-            <element signature="e#800#808#0" expanded="true" />
-            <element signature="e#1781#1797#0" expanded="true" />
-            <element signature="e#2523#2531#0" expanded="true" />
-            <element signature="e#3747#3755#0" expanded="true" />
-            <element signature="method#get#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#get#1;class#CourseDAO#0" expanded="false" />
-            <element signature="method#create#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#remove#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#update#0;class#CourseDAO#0" expanded="false" />
-            <element signature="method#getBy#0;class#CourseDAO#0" expanded="false" />
-            <marker date="1435431608031" expanded="true" signature="965:985" placeholder="SELECT * FRO..COURSE..." />
-            <marker date="1435431608031" expanded="true" signature="2754:2884" placeholder="SELECT cours..HUMAN..." />
-            <marker date="1435431608031" expanded="true" signature="3042:3120" placeholder="SELECT cours..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="3976:4083" placeholder="SELECT cours..HUMAN..." />
-            <marker date="1435431608031" expanded="true" signature="4238:4295" placeholder="SELECT cours..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="5216:5290" placeholder="SELECT feedb..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="6264:6334" placeholder="SELECT mark ..COURSE_STUDENT..." />
-            <marker date="1435431608031" expanded="true" signature="7075:7110" placeholder="SELECT * FRO..COURSE..." />
-            <marker date="1435431608031" expanded="true" signature="7547:7580" placeholder="SELECT * FRO..COURSE..." />
-            <marker date="1435431608031" expanded="true" signature="8064:8115" placeholder="INSERT INTO ..." />
-            <marker date="1435431608031" expanded="true" signature="8746:8777" placeholder="DELETE FROM ..." />
-            <marker date="1435431608031" expanded="true" signature="9349:9435" placeholder="INSERT INTO ..." />
-            <marker date="1435431608031" expanded="true" signature="10132:10197" placeholder="DELETE FROM ..." />
-            <marker date="1435431608031" expanded="true" signature="10793:10856" placeholder="UPDATE COURS..." />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/ICommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/LoginCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/LogoutCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="method#processRequest#0;class#DispatcherServlet#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1586,7 +1501,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RegisterCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1594,32 +1525,137 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/HumanDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#739#746#0" expanded="true" />
             <element signature="e#1965#1972#0" expanded="true" />
             <element signature="method#get#0;class#HumanDAO#0" expanded="false" />
-            <element signature="method#get#1;class#HumanDAO#0" expanded="false" />
             <element signature="method#remove#0;class#HumanDAO#0" expanded="false" />
             <element signature="method#update#0;class#HumanDAO#0" expanded="false" />
-            <element signature="method#getBy#0;class#HumanDAO#0" expanded="false" />
-            <marker date="1435413676667" expanded="true" signature="903:922" placeholder="SELECT * FRO..HUMAN..." />
-            <marker date="1435413676667" expanded="true" signature="2173:2230" placeholder="SELECT stude..COURSE_STUDENT..." />
-            <marker date="1435413676667" expanded="true" signature="2905:2943" placeholder="SELECT * FRO..HUMAN..." />
-            <marker date="1435413676667" expanded="true" signature="3407:3439" placeholder="SELECT * FRO..HUMAN..." />
-            <marker date="1435413676667" expanded="true" signature="3913:3996" placeholder="INSERT INTO ..." />
-            <marker date="1435413676667" expanded="true" signature="4787:4817" placeholder="DELETE FROM ..." />
-            <marker date="1435413676667" expanded="true" signature="5383:5481" placeholder="UPDATE HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT stude..COURSE_STUDENT..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1435413676667" expanded="true" signature="-1:-1" placeholder="UPDATE HUMAN..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/filters/AuthVerification.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15289256">
-          <caret line="16" column="73" selection-start-line="16" selection-start-column="73" selection-end-line="16" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="131" selection-start-line="67" selection-start-column="131" selection-end-line="67" selection-end-column="131" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/CoursesDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="70" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2452831">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/AddCourseCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.490566">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.769231">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/EnrollCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.599359">
+          <caret line="309" column="21" selection-start-line="309" selection-start-column="21" selection-end-line="309" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#800#808#0" expanded="true" />
+            <element signature="e#1781#1797#0" expanded="true" />
+            <element signature="e#2523#2531#0" expanded="true" />
+            <element signature="e#3930#3938#0" expanded="true" />
+            <element signature="e#5042#5050#0" expanded="true" />
+            <element signature="method#create#0;class#CourseDAO#0" expanded="false" />
+            <marker date="1435447127007" expanded="true" signature="965:985" placeholder="SELECT * FRO..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="2754:2783" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="2754:2961" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="2801:2960" placeholder="SELECT cs.co..HUMAN..." />
+            <marker date="1435447127007" expanded="true" signature="3118:3147" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="3118:3303" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="3118:3304" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="3165:3302" placeholder="SELECT cs.co..HUMAN..." />
+            <marker date="1435447127007" expanded="true" signature="4159:4266" placeholder="SELECT cours..HUMAN..." />
+            <marker date="1435447127007" expanded="true" signature="4421:4478" placeholder="SELECT cours..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="5273:5367" placeholder="SELECT c.id ..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="5524:5566" placeholder="SELECT id FR..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="6488:6562" placeholder="SELECT feedb..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="7536:7606" placeholder="SELECT mark ..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="8347:8382" placeholder="SELECT * FRO..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="8819:8852" placeholder="SELECT * FRO..COURSE..." />
+            <marker date="1435447127007" expanded="true" signature="9336:9387" placeholder="INSERT INTO ..." />
+            <marker date="1435447127007" expanded="true" signature="10018:10049" placeholder="DELETE FROM ..." />
+            <marker date="1435447127007" expanded="true" signature="10686:10772" placeholder="INSERT INTO ..." />
+            <marker date="1435447127007" expanded="true" signature="11477:11534" placeholder="SELECT cours..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="11477:11552" placeholder="SELECT cours..COURSE_STUDENT..." />
+            <marker date="1435447127007" expanded="true" signature="12163:12228" placeholder="DELETE FROM ..." />
+            <marker date="1435447127007" expanded="true" signature="12824:12887" placeholder="UPDATE COURS..." />
+          </folding>
         </state>
       </provider>
     </entry>

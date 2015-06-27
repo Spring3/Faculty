@@ -32,7 +32,7 @@ public class RegisterCommand implements ICommand {
         String password2 = request.getParameter("password2");
         String name = request.getParameter("name");
         String lastName = request.getParameter("lastname");
-        boolean isTeacher = (Boolean.valueOf(request.getParameter("teacher")));
+        boolean isTeacher = request.getParameter("teacher") != null;
 
         if (username != null && password1 != null && password2 != null && name != null && lastName != null)
         {

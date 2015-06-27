@@ -46,12 +46,14 @@ public class CoursesDAOTest {
 
     @Test
     public void getAllCoursesForTest(){
-        Assert.assertEquals(dao.getAllCoursesFor(student).size(), 0);
+        int size = dao.getAll().size() - dao.getAllAvailableCoursesFor(student).size();
+        Assert.assertEquals(dao.getAllCoursesFor(student).size(), size);
     }
 
     @Test
     public void getAllAvailableCoursesForTest(){
-        Assert.assertEquals(dao.getAllAvailableCoursesFor(student).size(), 0);
+        int size = dao.getAll().size() - dao.getAllCoursesFor(student).size();
+        Assert.assertEquals(dao.getAllAvailableCoursesFor(student).size(), size);
     }
 
     @Test

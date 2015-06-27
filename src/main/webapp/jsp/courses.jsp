@@ -12,23 +12,20 @@
   <body>
   <h3>Available courses</h3>
   <%
-    request.setCharacterEncoding("UTF-8");
     CourseDAO courseDAO = new CourseDAO();
     HumanDAO humanDAO = new HumanDAO();
     Human currentUser = humanDAO.get((String) session.getAttribute("username"));
-    if (currentUser != null){
-      List<Course> availableCourses = courseDAO.getAllAvailableCoursesFor(currentUser);
-      for (Course course : availableCourses){
+    List<Course> availableCourses = courseDAO.getAllAvailableCoursesFor(currentUser);
+    for (Course course : availableCourses){
   %>
     <form action="/dispatcher" method="post">
-      <a href="/course"><%= course.getName() + " (" + course.getTeacher() + ") "%></a>
-      <input type="submit" value="Enroll"/>
+      <a href=""><%= course.getName() + " (" + course.getTeacher() + ") "%></a>
+      <input type="hidden" name="name" value="<%=course.getName()%>"/>
       <input type="hidden" name="command" value="enroll"/>
+      <input type="submit" value="Enroll"/>
       <br>
     </form>
-
   <%
-      }
     }
   %>
   </body>
