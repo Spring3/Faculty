@@ -271,6 +271,25 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
+    public boolean saveFeedback(String feedback, String mark, Human student, Course course){
+        boolean result = false;
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement = connection.prepareStatement("UPDATE COURSE_STUDENT SET mark = ?, feedback = ? WHERE course_id = ? AND student_id = ?");
+            statement.setString(1, mark);
+            statement.setString(2, feedback);
+            statement.setInt(3, course.getId());
+            statement.setInt(4, student.getId());
+            result = statement.executeUpdate() > 0;
+            connectionPool.closeConnection(connection);
+        }
+        catch (SQLException ex){
+            logger.error(ex.getMessage());
+            ex.printStackTrace();
+        }
+        return result;
+    }
+
     //Enroll a student on course
     public boolean enroll(Course course, Human human){
         if (isEnrolled(human, course))

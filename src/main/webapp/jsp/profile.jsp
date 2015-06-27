@@ -42,8 +42,8 @@
       for (Map.Entry<String, String> feedback : markAndFeedback.entrySet()){
         if (feedback.getKey() != null){
     %>
-    <h3>Feedback from: <%= enrolledCourses.get(index).getName() + " on course " + enrolledCourses.get(index).getName()%>></h3>
-    <h4>Mark: <%= feedback.getKey()%></h4>
+    <h4>Feedback from: <%= enrolledCourses.get(index).getTeacher() + " on course " + enrolledCourses.get(index).getName()%>></h4>
+    <h5>Mark: <%= feedback.getKey()%></h5>
     <p><%= feedback.getValue()%></p>
     <br>
     <%

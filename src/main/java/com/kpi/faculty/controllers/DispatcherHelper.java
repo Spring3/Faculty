@@ -22,6 +22,7 @@ public final class DispatcherHelper {
         commands.put("unenroll", new UnenrollCommand());
         commands.put("addCourse", new AddCourseCommand());
         commands.put("logout", new LogoutCommand());
+        commands.put("feedback", new FeedbackCommand());
 
     }
 
