@@ -1,5 +1,6 @@
 package com.kpi.faculty.dao;
 
+import com.kpi.faculty.models.Course;
 import com.kpi.faculty.models.Human;
 import com.kpi.faculty.models.Student;
 import com.kpi.faculty.models.Teacher;
@@ -39,6 +40,28 @@ public class HumanDAO implements IDAO<Human>{
                 humanStub.setPassword(resultSet.getString(5));
                 humanStub.setRole(Human.Role.valueOf(role));
                 resultList.add(humanStub);
+            }
+            connectionPool.closeConnection(connection);
+        }
+        catch (SQLException ex){
+            logger.error(ex.getMessage());
+            ex.printStackTrace();
+        }
+
+        return resultList;
+    }
+
+    //Get all students for a course
+    public List<Human> getAllStudentsFor(Course course){
+        List<Human> resultList = new ArrayList<Human>();
+        HumanDAO humanDAO = new HumanDAO();
+        try {
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT student_id FROM COURSE_STUDENT WHERE course_id = ?;");
+            statement.setInt(1, course.getId());
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()){
+                resultList.add(humanDAO.get(resultSet.getInt(1)));
             }
             connectionPool.closeConnection(connection);
         }

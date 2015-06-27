@@ -4,10 +4,11 @@ import com.kpi.faculty.models.Course;
 import com.kpi.faculty.models.Human;
 import com.kpi.faculty.util.ConnectionPool;
 import org.apache.log4j.Logger;
-
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /*
     Data access object for Course class
@@ -47,33 +48,95 @@ public class CourseDAO implements IDAO<Course> {
         return resultList;
     }
 
-    //Get all students for a course
-    public List<Human> getAllStudentsFor(Course course){
-        List<Human> resultList = new ArrayList<Human>();
-        HumanDAO humanDAO = new HumanDAO();
+    public Map<String, String> collectFeedbackAndMarksFor(Human student){
+        Connection connection = null;
+        Map<String, String> resultMap = new LinkedHashMap<String, String>();
         try {
-            Connection connection = connectionPool.getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT student_id FROM COURSE_STUDENT WHERE course_id = ?;");
-            statement.setInt(1, course.getId());
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()){
-                resultList.add(humanDAO.get(resultSet.getInt(1)));
+            connection = connectionPool.getConnection();
+            List<Course> enrolledCourses = getAllCoursesFor(student);
+            for(Course course : enrolledCourses){
+                resultMap.put(getMarkForStudent(student, course, connection), getFeedBackForStudent(student, course, connection));
             }
             connectionPool.closeConnection(connection);
         }
-        catch (SQLException ex){
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultMap;
+    }
+
+    //Gell all available courses for a student. Includes only those, which he wasn't enrolled on.
+    public List<Course> getAllAvailableCoursesFor(Human student){
+        List<Course> resultList = new ArrayList<Course>();
+
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement;
+            if (student.getId() == 0){
+                statement = connection.prepareStatement("SELECT course_id FROM HUMAN as h INNER JOIN COURSE_STUDENT as c ON h.id = c.student_id WHERE h.username <=> ? GROUP BY c.course_id ;");
+                statement.setString(1, student.getUsername());
+            }
+            else{
+                statement = connection.prepareStatement("SELECT course_id FROM COURSE_STUDENT WHERE student_id <=> ? GROUP BY course_id;");
+                statement.setInt(1, student.getId());
+
+            }
+
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                resultList.add(get(resultSet.getInt(1)));
+            }
+            connectionPool.closeConnection(connection);
+
+        }
+        catch(SQLException ex){
             logger.error(ex.getMessage());
             ex.printStackTrace();
         }
+        return resultList;
+    }
 
+    //Get all courses on which a student is already enrolled
+    public List<Course> getAllCoursesFor(Human human){
+        List<Course> resultList = new ArrayList<Course>();
+
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement;
+            if (human.getId() == 0){
+                statement = connection.prepareStatement("SELECT course_id FROM HUMAN as h INNER JOIN COURSE_STUDENT as c ON h.id = c.student_id WHERE h.username = ?;");
+                statement.setString(1, human.getUsername());
+            }
+            else{
+                statement = connection.prepareStatement("SELECT course_id FROM COURSE_STUDENT WHERE student_id = ?;");
+                statement.setInt(1, human.getId());
+
+            }
+
+            ResultSet resultSet = statement.executeQuery();
+            while(resultSet.next()){
+                resultList.add(get(resultSet.getInt(1)));
+            }
+            connectionPool.closeConnection(connection);
+
+        }
+        catch(SQLException ex){
+            logger.error(ex.getMessage());
+            ex.printStackTrace();
+        }
         return resultList;
     }
 
     //Get feedback for a student on course
-    public String getFeedBackForStudent(Human student, Course course){
+    public String getFeedBackForStudent(Human student, Course course, Connection connection){
         String feedback = null;
+        boolean haveToCloseConnection = false;
+
         try{
-            Connection connection = connectionPool.getConnection();
+            if (connection == null){
+                haveToCloseConnection = true;
+                connection = connectionPool.getConnection();
+            }
             PreparedStatement statement = connection.prepareStatement("SELECT feedback FROM COURSE_STUDENT WHERE student_id = ? AND course_id = ?;");
             statement.setInt(1, student.getId());
             statement.setInt(2, course.getId());
@@ -81,7 +144,8 @@ public class CourseDAO implements IDAO<Course> {
             while (resultSet.next()){
                 feedback = resultSet.getString(1);
             }
-            connectionPool.closeConnection(connection);
+            if (haveToCloseConnection)
+                connectionPool.closeConnection(connection);
         }
         catch (SQLException ex){
             ex.printStackTrace();
@@ -91,10 +155,14 @@ public class CourseDAO implements IDAO<Course> {
     }
 
     //Get mark for a student on course
-    public String getMarkForStudent(Human student, Course course){
+    public String getMarkForStudent(Human student, Course course, Connection connection){
         String mark = null;
+        boolean haveToCloseConnection = false;
         try{
-            Connection connection = connectionPool.getConnection();
+            if (connection == null){
+                haveToCloseConnection = true;
+                connection = connectionPool.getConnection();
+            }
             PreparedStatement statement = connection.prepareStatement("SELECT mark FROM COURSE_STUDENT WHERE student_id = ? AND course_id = ?;");
             statement.setInt(1, student.getId());
             statement.setInt(2, course.getId());
@@ -102,7 +170,8 @@ public class CourseDAO implements IDAO<Course> {
             while (resultSet.next()){
                 mark = resultSet.getString(1);
             }
-            connectionPool.closeConnection(connection);
+            if (haveToCloseConnection)
+                connectionPool.closeConnection(connection);
         }
         catch (SQLException ex){
             ex.printStackTrace();
@@ -117,6 +186,20 @@ public class CourseDAO implements IDAO<Course> {
             Connection connection = connectionPool.getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM COURSE WHERE name = ?;");
             statement.setString(1, name);
+            return getBy(statement, connection);
+        }
+        catch (SQLException ex){
+            ex.printStackTrace();
+            logger.error(ex.getMessage());
+        }
+        return null;
+    }
+
+    public Course get(int id){
+        try{
+            Connection connection = connectionPool.getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM COURSE WHERE id = ?;");
+            statement.setInt(1, id);
             return getBy(statement, connection);
         }
         catch (SQLException ex){

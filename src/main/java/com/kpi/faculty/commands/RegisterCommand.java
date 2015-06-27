@@ -43,7 +43,6 @@ public class RegisterCommand implements ICommand {
                     humanDAO.create(user);
                     HttpSession session = request.getSession();
                     session.setAttribute("username", username);
-                    request.setAttribute("username", username);
                     page = Config.getInstance().getValue(Config.PROFILE);
                     logger.info("User successfully registered");
                 }

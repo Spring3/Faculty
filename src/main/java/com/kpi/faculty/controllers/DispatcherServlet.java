@@ -5,6 +5,8 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,7 +42,7 @@ public class DispatcherServlet extends HttpServlet {
             logger.error(ioex.getMessage());
         }
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pageURL);
-        dispatcher.forward(request,response);
+        dispatcher.forward(request, response);
     }
 
     @Override
@@ -58,6 +60,5 @@ public class DispatcherServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         processRequest(req, resp);
     }
-
 
 }

@@ -1,29 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 6/25/2015
-  Time: 11:26 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.kpi.faculty.dao.CourseDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="UTF-8" %>
 <html>
   <head>
-    <title>Authorization</title>
+    <%
+      request.setCharacterEncoding("UTF-8");
+       String courseName = (String)request.getAttribute("course");
+    %>
+    <title><%= courseName%></title>
   </head>
-  <h2>Welcome to our service. Please, sign in to proceed.</h2>
   <body>
 
-    <form action="/" method="post">
-      <input type="text" name="username" placeholder="Username"/>
-      <input type="password" name="password" placeholder="Password"/>
-      <input type="hidden" name="command" value="login"/>
-      <input type="submit" value="Sign in"/>
-    </form>
-
-    <form action="/" method="get">
-      <input type="hidden" name="command" value="register"/>
-      <input type="submit" value="Sign up"/>
-    </form>
+  <h3><%= courseName%></h3>
+  <h3>Teacher: <%= new CourseDAO().get(courseName).getTeacher()%></h3>
+  <h4>Welcome to the course room.</h4>
+  <p>Here you can find all the material we will need while going through this course.</p>
 
   </body>
 </html>

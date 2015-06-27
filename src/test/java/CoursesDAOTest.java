@@ -28,38 +28,40 @@ public class CoursesDAOTest {
     public void init() throws SQLException {
         dao = new CourseDAO();
         humanDAO = new HumanDAO();
-        student = new Student("student", "student", "Johny", "Doe");
+        student = new Student("Student", "student", "Johny", "Doe");
         teacher = new Teacher("username", "password", "John", "Doe");
         tempCourse = new Course("Test course", teacher);
     }
 
     @Test
     public void getAllTest(){
-        Assert.assertEquals(dao.getAll().size(), 0);
+        int size = dao.getAll().size();
+        Assert.assertEquals(dao.getAll().size(), size);
         Assert.assertTrue(dao.create(tempCourse));
-        Assert.assertEquals(dao.getAll().size(), 1);
+        Assert.assertEquals(dao.getAll().size(), size + 1);
         tempCourse = dao.get(tempCourse.getName());
         Assert.assertTrue(dao.remove(tempCourse));
-        Assert.assertEquals(dao.getAll().size(), 0);
+        Assert.assertEquals(dao.getAll().size(), size);
     }
 
     @Test
-    public void getAllStudentsForCourseTest(){
-        Assert.assertEquals(dao.getAllStudentsFor(tempCourse).size(), 0);
-        Assert.assertTrue(dao.enroll(tempCourse, student));
-        Assert.assertEquals(dao.getAllStudentsFor(tempCourse).size(), 1);
-        Assert.assertTrue(dao.unenroll(tempCourse, student));
-        Assert.assertEquals(dao.getAllStudentsFor(tempCourse).size(), 0);
+    public void getAllCoursesForTest(){
+        Assert.assertEquals(dao.getAllCoursesFor(student).size(), 0);
+    }
+
+    @Test
+    public void getAllAvailableCoursesForTest(){
+        Assert.assertEquals(dao.getAllAvailableCoursesFor(student).size(), 0);
     }
 
     @Test
     public void getFeedbackForStudentTest(){
-        Assert.assertNull(dao.getFeedBackForStudent(student, tempCourse));
+        Assert.assertNull(dao.getFeedBackForStudent(student, tempCourse, null));
     }
 
     @Test
     public void getMarkForStudentTest(){
-        Assert.assertNull(dao.getFeedBackForStudent(student, tempCourse));
+        Assert.assertNull(dao.getFeedBackForStudent(student, tempCourse, null));
     }
 
     @Test
@@ -81,9 +83,10 @@ public class CoursesDAOTest {
 
     @Test
     public void removeTest(){
+        int size = dao.getAll().size();
         Assert.assertTrue(dao.create(tempCourse));
         Assert.assertTrue(dao.remove(dao.get(tempCourse.getName())));
-        Assert.assertEquals(dao.getAll().size(), 0);
+        Assert.assertEquals(dao.getAll().size(), size);
     }
 
     @Test

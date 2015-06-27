@@ -15,25 +15,25 @@ public class AuthVerification implements Filter {
     private static final Logger logger = Logger.getLogger(AuthVerification.class);
 
     public void init(FilterConfig filterConfig) throws ServletException {
-
     }
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        String userName = (String)servletRequest.getAttribute("username");
+        servletRequest.setCharacterEncoding("UTF-8");
+        String userName = (String)((HttpServletRequest)servletRequest).getSession().getAttribute("username");
         String url = ((HttpServletRequest)servletRequest).getRequestURL().toString();
 
         if (userName != null){
             filterChain.doFilter(servletRequest, servletResponse);
-            logger.info(String.format("Received a request from user %s", userName));
+            logger.info(String.format("Received a request from user %s to %s", userName, url));
         }
         else
         {
-            if (servletRequest.getParameter("username") != null){
+            if (url.contains("/reg.jsp") || servletRequest.getParameter("username") != null){
                 filterChain.doFilter(servletRequest, servletResponse);
             }
             else {
                 ((HttpServletResponse) servletResponse).sendRedirect(Config.getInstance().getValue(Config.LOGIN));
-                logger.info("Unauthorized access. Abandoned. Redirecting to login page...");
+                logger.info(String.format("Unauthorized access to %s. Denied. Redirecting to login page...", url));
             }
         }
     }

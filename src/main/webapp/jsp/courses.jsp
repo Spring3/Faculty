@@ -1,29 +1,35 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 6/25/2015
-  Time: 11:26 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.kpi.faculty.models.Course" %>
+<%@ page import="com.kpi.faculty.models.Human" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.kpi.faculty.dao.HumanDAO" %>
+<%@ page import="com.kpi.faculty.dao.CourseDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="UTF-8" %>
 <html>
   <head>
-    <title>Authorization</title>
+    <title>Courses</title>
   </head>
-  <h2>Welcome to our service. Please, sign in to proceed.</h2>
   <body>
-
+  <h3>Available courses</h3>
+  <%
+    request.setCharacterEncoding("UTF-8");
+    CourseDAO courseDAO = new CourseDAO();
+    HumanDAO humanDAO = new HumanDAO();
+    Human currentUser = humanDAO.get((String) session.getAttribute("username"));
+    if (currentUser != null){
+      List<Course> availableCourses = courseDAO.getAllAvailableCoursesFor(currentUser);
+      for (Course course : availableCourses){
+  %>
     <form action="/dispatcher" method="post">
-      <input type="text" name="username" placeholder="Username"/>
-      <input type="password" name="password" placeholder="Password"/>
-      <input type="hidden" name="command" value="login"/>
-      <input type="submit" value="Sign in"/>
+      <a href="/course"><%= course.getName() + " (" + course.getTeacher() + ") "%></a>
+      <input type="submit" value="Enroll"/>
+      <input type="hidden" name="command" value="enroll"/>
+      <br>
     </form>
 
-    <form action="/" method="get">
-      <input type="hidden" name="command" value="register"/>
-      <input type="submit" value="Sign up"/>
-    </form>
-
+  <%
+      }
+    }
+  %>
   </body>
 </html>

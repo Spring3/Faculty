@@ -56,7 +56,7 @@ public class ConnectionPool {
 
     /*
         To properly create a user and the schema of the database, use this as a query for mysql
-        CREATE SCHEMA IF NOT EXISTS faculty;
+        CREATE SCHEMA IF NOT EXISTS faculty CHARACTER SET NAMES utf8 COLLATE utf8_unicode_ci;
         CREATE USER 'facultyadmin'@'localhost' IDENTIFIED BY 'verysecret';
         GRANT ALL PRIVILEGES ON * . * TO 'facultyadmin'@'localhost';
      */
@@ -65,7 +65,7 @@ public class ConnectionPool {
         String[] queries = new String[]{
                 "CREATE TABLE IF NOT EXISTS HUMAN (id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, name varchar(10) NOT NULL, lastname varchar(20) NOT NULL, username varchar(20) NOT NULL, password varchar(50) NOT NULL, role varchar(10) NOT NULL);",
                 "CREATE TABLE IF NOT EXISTS COURSE (id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, name varchar(40), teacher_id INT UNSIGNED);",
-                "CREATE TABLE IF NOT EXISTS COURSE_STUDENT (course_id INT UNSIGNED, student_id INT UNSIGNED, mark varchar(1), feedback text);"
+                "CREATE TABLE IF NOT EXISTS COURSE_STUDENT (id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, course_id INT UNSIGNED, student_id INT UNSIGNED, mark varchar(1), feedback text);"
         };
 
         try {
