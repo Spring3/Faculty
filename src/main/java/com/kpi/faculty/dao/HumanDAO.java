@@ -10,8 +10,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by user on 6/26/2015.
+/*
+    Data access object for 'HUMAN' table from the database
  */
 public class HumanDAO implements IDAO<Human>{
 
@@ -22,6 +22,7 @@ public class HumanDAO implements IDAO<Human>{
     private static final ConnectionPool connectionPool = ConnectionPool.getInstance();
     private static final Logger logger = Logger.getLogger(HumanDAO.class);
 
+    //Get alll users
     public List<Human> getAll() {
         List<Human> resultList = new ArrayList<Human>();
         try {
@@ -49,6 +50,7 @@ public class HumanDAO implements IDAO<Human>{
         return resultList;
     }
 
+    //Get a user by username
     public Human get(String username) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -63,6 +65,7 @@ public class HumanDAO implements IDAO<Human>{
         return null;
     }
 
+    //Get a user by id
     public Human get(int id) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -77,6 +80,7 @@ public class HumanDAO implements IDAO<Human>{
         return null;
     }
 
+    //Save user to the database
     public boolean create(Human value) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -97,6 +101,7 @@ public class HumanDAO implements IDAO<Human>{
         return false;
     }
 
+    //Remove user from the database
     public boolean remove(Human value) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -113,6 +118,7 @@ public class HumanDAO implements IDAO<Human>{
         return false;
     }
 
+    //Update user entity in the database
     public boolean update(Human value) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -135,6 +141,7 @@ public class HumanDAO implements IDAO<Human>{
         return false;
     }
 
+    //'Get by' retrievement method
     private Human getBy(PreparedStatement statement, Connection connection){
         try{
             Human humanBuffer = null;

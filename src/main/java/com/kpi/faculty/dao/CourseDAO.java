@@ -9,8 +9,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by user on 6/26/2015.
+/*
+    Data access object for Course class
+    Fetches all the data from 'COURSE' table in the database
  */
 public class CourseDAO implements IDAO<Course> {
 
@@ -18,9 +19,11 @@ public class CourseDAO implements IDAO<Course> {
 
     }
 
+    //apache tomcat connection pool
     private static final ConnectionPool connectionPool = ConnectionPool.getInstance();
     private static final Logger logger = Logger.getLogger(CourseDAO.class);
 
+    //Get all courses
     public List<Course> getAll() {
         List<Course> resultList = new ArrayList<Course>();
         try {
@@ -44,6 +47,7 @@ public class CourseDAO implements IDAO<Course> {
         return resultList;
     }
 
+    //Get all students for a course
     public List<Human> getAllStudentsFor(Course course){
         List<Human> resultList = new ArrayList<Human>();
         HumanDAO humanDAO = new HumanDAO();
@@ -65,6 +69,7 @@ public class CourseDAO implements IDAO<Course> {
         return resultList;
     }
 
+    //Get feedback for a student on course
     public String getFeedBackForStudent(Human student, Course course){
         String feedback = null;
         try{
@@ -85,6 +90,7 @@ public class CourseDAO implements IDAO<Course> {
         return feedback;
     }
 
+    //Get mark for a student on course
     public String getMarkForStudent(Human student, Course course){
         String mark = null;
         try{
@@ -105,6 +111,7 @@ public class CourseDAO implements IDAO<Course> {
         return mark;
     }
 
+    //Get course object by name
     public Course get(String name) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -119,6 +126,7 @@ public class CourseDAO implements IDAO<Course> {
         return null;
     }
 
+    //Save course object to the database
     public boolean create(Course value) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -136,6 +144,7 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
+    //Remove course object from the database
     public boolean remove(Course value) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -151,6 +160,8 @@ public class CourseDAO implements IDAO<Course> {
         }
         return false;
     }
+
+    //Enroll a student on course
     public boolean enroll(Course course, Human human){
         try{
             Connection connection = connectionPool.getConnection();
@@ -170,6 +181,7 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
+    //Unenroll from a course
     public boolean unenroll(Course course, Human human){
         try{
             Connection connection = connectionPool.getConnection();
@@ -187,6 +199,7 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
+    //Update course object
     public boolean update(Course value) {
         try{
             Connection connection = connectionPool.getConnection();
@@ -206,6 +219,7 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
+    //Retrievement 'by param' method
     private Course getBy(PreparedStatement statement, Connection connection){
         try{
             Course courseBuffer = new Course();

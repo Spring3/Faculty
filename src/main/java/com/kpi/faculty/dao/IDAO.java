@@ -2,9 +2,8 @@ package com.kpi.faculty.dao;
 
 import java.util.List;
 
-/**
- * Created by user on 6/26/2015.
- */
+
+//Basic CRUD interface
 public interface IDAO <T> {
     List<T> getAll();
     T get(String name);

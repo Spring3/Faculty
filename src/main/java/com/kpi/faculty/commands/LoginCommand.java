@@ -11,14 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * Created by user on 6/26/2015.
+/*
+    Login command handler
  */
 public class LoginCommand implements ICommand {
 
+    // Request parameter names
     private static final String USERNAME = "username";
     private static final String PASSWORD = "password";
+    // Error text
     private static final String ERROR_LOGIN = "Wrong username or password";
+    //Data access object for Human class
     private HumanDAO humanDAO = new HumanDAO();
 
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,6 +57,9 @@ public class LoginCommand implements ICommand {
         return page;
     }
 
+    /*
+     * Error handler
+     */
     private String redirectToLoginPage(HttpServletRequest request){
         request.setAttribute("error", ERROR_LOGIN);
         return Config.getInstance().getValue(Config.LOGIN);

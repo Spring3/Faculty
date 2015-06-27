@@ -8,9 +8,9 @@ import com.kpi.faculty.commands.UnknownCommand;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 
-/**
- * Created by user on 6/26/2015.
- */
+/*
+   Main Servlet helper. Routs received requests to the right commands.
+*/
 public final class DispatcherHelper {
 
     private static DispatcherHelper instance;
@@ -36,7 +36,7 @@ public final class DispatcherHelper {
         return instance;
     }
 
-    //get command implementation according to the parameter from HttpRequest
+    //get command implementation according to the 'command' parameter from HttpRequest
     public ICommand getCommand(HttpServletRequest request){
         ICommand resultCommand = commands.get(request.getParameter("command"));
         if (resultCommand == null){

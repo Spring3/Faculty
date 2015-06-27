@@ -2,9 +2,6 @@ package com.kpi.faculty.models;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
-/**
- * Created by user on 6/26/2015.
- */
 public abstract class Human {
 
     public enum Role{
@@ -15,7 +12,7 @@ public abstract class Human {
     private int id;
     private String name;
     private String lastName;
-    private String password;  //sha1 encoded
+    private String password;  //sha1Hex encrypted
     private String username;
     private Role role;
 
@@ -67,6 +64,7 @@ public abstract class Human {
         return role;
     }
 
+    //Sha1Hex encryption method
     protected String encodePassword(String password){
         return DigestUtils.sha1Hex(password);
     }

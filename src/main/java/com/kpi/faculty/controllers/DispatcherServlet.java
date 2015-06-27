@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by user on 6/25/2015.
- */
+/*
+    Main Servlet. Gets all requests and then routs them to the right commands via DispatcherServletHelper.
+*/
 public class DispatcherServlet extends HttpServlet {
 
     private static final DispatcherHelper helper = DispatcherHelper.getInstance();
@@ -22,6 +22,9 @@ public class DispatcherServlet extends HttpServlet {
         super();
     }
 
+    /*
+        Gets all requests and passes them to the DispatcherServletHelper, which decides which page's URI to return
+     */
     private void processRequest (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         String pageURL = null;
         try{
@@ -41,11 +44,17 @@ public class DispatcherServlet extends HttpServlet {
     }
 
     @Override
+    /*
+        'GET' - type request handler
+     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
 
     @Override
+    /*
+        'POST' - type request handler
+     */
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         processRequest(req, resp);
     }

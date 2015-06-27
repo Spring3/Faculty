@@ -13,16 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * Created by user on 6/26/2015.
+/*
+    Registration command handler
  */
 public class RegisterCommand implements ICommand {
 
     private static final Logger logger = Logger.getLogger(RegisterCommand.class);
+    private HumanDAO humanDAO = new HumanDAO();
+
     private static final String NULLVALUE_ERROR = "Please, fill in all the fields.";
     private static final String USER_EXISTS = "Such user already exists.";
     private static final String PASS_NOT_MATCH = "Passwords don't match.";
-    private HumanDAO humanDAO = new HumanDAO();
 
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = null;

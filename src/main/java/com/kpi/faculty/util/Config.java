@@ -2,8 +2,9 @@ package com.kpi.faculty.util;
 
 import java.util.ResourceBundle;
 
-/**
- * Created by user on 6/26/2015.
+/*
+    Application configuration class
+    Uses config.properties as a configuration file
  */
 public class Config {
 

@@ -5,8 +5,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by user on 6/26/2015.
+/*
+    Unknown command stub
  */
 public class UnknownCommand implements ICommand {
 
