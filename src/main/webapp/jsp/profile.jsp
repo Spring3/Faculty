@@ -17,22 +17,23 @@
     HumanDAO humanDAO = new HumanDAO();
     Human currentUser = humanDAO.get((String) session.getAttribute("username"));
   %>
-  <body>
+  <body style="text-align:center;">
   <br>
     <form action="/dispatcher" method="post">
       <input type="submit" value="Log out"/>
       <input type="hidden" name="command" value="logout"/>
     </form>
 
+  <div class="info">
+    <h2><%= currentUser%></h2>
+    <h4>Username: <%= currentUser.getUsername()%></h4>
+    <h4>Role: <%=currentUser.getRole().name()%></h4>
+    <br>
+  </div>
+
   <%
     if (currentUser.getRole() == Human.Role.STUDENT){
   %>
-    <div class="info">
-      <h2><%= currentUser%></h2>
-      <h4><%= currentUser.getUsername()%></h4>
-      <br>
-    </div>
-
     <div class="feedback">
     <h3>Feedback</h3>
     <%
@@ -42,7 +43,7 @@
       for (Map.Entry<String, String> feedback : markAndFeedback.entrySet()){
         if (feedback.getKey() != null){
     %>
-    <h4>Feedback from: <%= enrolledCourses.get(index).getTeacher() + " on course " + enrolledCourses.get(index).getName()%>></h4>
+    <h4>Feedback from: <%= enrolledCourses.get(index).getTeacher() + " on course " + enrolledCourses.get(index).getName()%></h4>
     <h5>Mark: <%= feedback.getKey()%></h5>
     <p><%= feedback.getValue()%></p>
     <br>
@@ -54,12 +55,17 @@
     </div>
 
     <div class="courses">
-      <h3>Courses you have enrolled</h3>
+      <h3>Courses you have enrolled on</h3>
       <div class="enrolled">
         <%
           for (Course course : enrolledCourses){
         %>
           <a href="<%=Config.getInstance().getValue(Config.LOBBY)%>?course=<%=course.getName()%>"><%= course.getName() + " (" + course.getTeacher() + ") "%></a>
+          <form action="/dispatcher" method="post">
+            <input type="hidden" name="course" value="<%=course.getName()%>"/>
+            <input type="hidden" name="command" value="unenroll"/>
+            <input type="submit" value="Unenroll"/>
+          </form>
           <br>
         <%
           }

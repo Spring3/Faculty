@@ -5,7 +5,7 @@
   <head>
     <title>Registration</title>
   </head>
-  <body>
+  <body style="text-align:center;">
 
     <%
       if (session.getAttribute("username") == null){

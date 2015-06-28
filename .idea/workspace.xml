@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="278" column="38" selection-start-line="278" selection-start-column="38" selection-end-line="278" selection-end-column="38" />
+              <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#800#808#0" expanded="true" />
@@ -71,16 +71,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DispatcherServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ConnectionPool.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,6 +93,13 @@
                 <element signature="method#get#0;class#HumanDAO#0" expanded="false" />
                 <element signature="method#remove#0;class#HumanDAO#0" expanded="false" />
                 <element signature="method#update#0;class#HumanDAO#0" expanded="false" />
+                <marker date="1435413676667" expanded="true" signature="903:922" placeholder="SELECT * FRO..HUMAN..." />
+                <marker date="1435413676667" expanded="true" signature="2173:2230" placeholder="SELECT stude..COURSE_STUDENT..." />
+                <marker date="1435413676667" expanded="true" signature="2905:2943" placeholder="SELECT * FRO..HUMAN..." />
+                <marker date="1435413676667" expanded="true" signature="3407:3439" placeholder="SELECT * FRO..HUMAN..." />
+                <marker date="1435413676667" expanded="true" signature="3913:3996" placeholder="INSERT INTO ..." />
+                <marker date="1435413676667" expanded="true" signature="4787:4817" placeholder="DELETE FROM ..." />
+                <marker date="1435413676667" expanded="true" signature="5383:5481" placeholder="UPDATE HUMAN..." />
               </folding>
             </state>
           </provider>
@@ -124,56 +121,58 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.230769">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              <caret line="35" column="95" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="courses.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7535014">
+              <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48825064">
-              <caret line="44" column="66" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+            <state vertical-scroll-proportion="-1.6037736">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Student.java">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state vertical-scroll-proportion="-7.8846154">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Human.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Human.java">
+      <file leaf-file-name="reg.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-              <folding>
-                <element signature="method#equals#0;class#Human#0" expanded="false" />
-                <element signature="method#hashCode#0;class#Human#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/models/Course.java">
+      <file leaf-file-name="UnenrollCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnenrollCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding>
-                <element signature="method#Course#0;class#Course#0" expanded="false" />
-                <element signature="method#Course#1;class#Course#0" expanded="false" />
-                <element signature="method#equals#0;class#Course#0" expanded="false" />
-                <element signature="method#hashCode#0;class#Course#0" expanded="false" />
-              </folding>
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -218,22 +217,22 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/filters/AuthVerification.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/LogoutCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/EnrollCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnenrollCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RegisterCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/AddCourseCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/RedirectCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/test/java/CoursesDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/controllers/DispatcherHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/FeedbackCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp" />
       </list>
     </option>
   </component>
@@ -1083,20 +1082,20 @@
       <updated>1435263875592</updated>
       <workItem from="1435263877700" duration="5989000" />
       <workItem from="1435314776514" duration="31656000" />
-      <workItem from="1435400157238" duration="35709000" />
+      <workItem from="1435400157238" duration="37367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73354000" />
+    <option name="totallyTimeSpent" value="75012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35620916" sideWeight="0.5060514" order="0" side_tool="true" content_ui="tabs" />
@@ -1104,7 +1103,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21709532" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2859477" sideWeight="0.49394855" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2859477" sideWeight="0.49394855" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1235,6 +1234,13 @@
             <element signature="method#get#0;class#HumanDAO#0" expanded="false" />
             <element signature="method#remove#0;class#HumanDAO#0" expanded="false" />
             <element signature="method#update#0;class#HumanDAO#0" expanded="false" />
+            <marker date="1435413676667" expanded="true" signature="903:922" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="2173:2230" placeholder="SELECT stude..COURSE_STUDENT..." />
+            <marker date="1435413676667" expanded="true" signature="2905:2943" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="3407:3439" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="3913:3996" placeholder="INSERT INTO ..." />
+            <marker date="1435413676667" expanded="true" signature="4787:4817" placeholder="DELETE FROM ..." />
+            <marker date="1435413676667" expanded="true" signature="5383:5481" placeholder="UPDATE HUMAN..." />
           </folding>
         </state>
       </provider>
@@ -1447,16 +1453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnenrollCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/ICommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1491,26 +1487,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CoursesDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="70" selection-start-line="49" selection-start-column="70" selection-end-line="49" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2452831">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1522,14 +1502,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.769231">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1599,11 +1571,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/UnenrollCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="185" selection-start-line="67" selection-start-column="185" selection-end-line="67" selection-end-column="185" />
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8846154">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/reg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6037736">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/FeedbackCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1618,6 +1624,13 @@
             <element signature="method#get#0;class#HumanDAO#0" expanded="false" />
             <element signature="method#remove#0;class#HumanDAO#0" expanded="false" />
             <element signature="method#update#0;class#HumanDAO#0" expanded="false" />
+            <marker date="1435413676667" expanded="true" signature="903:922" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="2173:2230" placeholder="SELECT stude..COURSE_STUDENT..." />
+            <marker date="1435413676667" expanded="true" signature="2905:2943" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="3407:3439" placeholder="SELECT * FRO..HUMAN..." />
+            <marker date="1435413676667" expanded="true" signature="3913:3996" placeholder="INSERT INTO ..." />
+            <marker date="1435413676667" expanded="true" signature="4787:4817" placeholder="DELETE FROM ..." />
+            <marker date="1435413676667" expanded="true" signature="5383:5481" placeholder="UPDATE HUMAN..." />
           </folding>
         </state>
       </provider>
@@ -1625,7 +1638,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/dao/CourseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="278" column="38" selection-start-line="278" selection-start-column="38" selection-end-line="278" selection-end-column="38" />
+          <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#800#808#0" expanded="true" />
@@ -1667,28 +1680,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/commands/FeedbackCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="49" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/lobby.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <caret line="35" column="95" selection-start-line="35" selection-start-column="95" selection-end-line="35" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/kpi/faculty/util/ConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48825064">
-          <caret line="44" column="66" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="185" selection-start-line="67" selection-start-column="185" selection-end-line="67" selection-end-column="185" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/courses.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7535014">
+          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
           <folding />
         </state>
       </provider>

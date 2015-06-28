@@ -15,7 +15,7 @@
     <title>Authorization</title>
   </head>
   <h2>Welcome to our service. Please, sign in to proceed.</h2>
-  <body>
+  <body style="text-align:center;">
     <br>
     <%
       String errorMessage = (String)request.getAttribute("error");

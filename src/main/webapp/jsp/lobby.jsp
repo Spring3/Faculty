@@ -15,7 +15,7 @@
     %>
     <title><%= courseName%></title>
   </head>
-  <body>
+  <body style="text-align:center;">
 
   <h3><%= courseName%></h3>
   <h3>Teacher: <%= currentCourse.getTeacher()%></h3>
@@ -28,13 +28,14 @@
   <h3>Enrolled students:</h3>
   <%
       for(Human student: humanDAO.getAllStudentsFor(currentCourse)){
+        String feedback = courseDAO.getFeedBackForStudent(student, currentCourse, null);
   %>
 
     <form action="/dispatcher" method="post">
       <label><b><%= student %></b>  </label>
-      <input type="text" name="feedback" placeholder="Feedback"/>
+      <input type="text" name="feedback" placeholder="Feedback" value="<%= feedback == null ? "" : feedback %>"/>
       <label>Mark: </label>
-      <select name="mark">
+      <select name="mark" >
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
