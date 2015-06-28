@@ -48,6 +48,7 @@ public class CourseDAO implements IDAO<Course> {
         return resultList;
     }
 
+    //Collects all feedback and marks from all the courses a student hast been enrolled on
     public Map<String, String> collectFeedbackAndMarksFor(Human student){
         Connection connection = null;
         Map<String, String> resultMap = new LinkedHashMap<String, String>();
@@ -125,6 +126,7 @@ public class CourseDAO implements IDAO<Course> {
         return resultList;
     }
 
+    //Returns all the courses of a teacher
     public List<Course> getAllCoursesOf(Human teacher){
         List<Course> resultList = new ArrayList<Course>();
 
@@ -222,6 +224,7 @@ public class CourseDAO implements IDAO<Course> {
         return null;
     }
 
+    //Get course by id
     public Course get(int id){
         try{
             Connection connection = connectionPool.getConnection();
@@ -271,6 +274,7 @@ public class CourseDAO implements IDAO<Course> {
         return false;
     }
 
+    //Save feedback and mark to the database
     public boolean saveFeedback(String feedback, String mark, Human student, Course course){
         boolean result = false;
         try{

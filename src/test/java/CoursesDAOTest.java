@@ -13,9 +13,6 @@ import org.junit.Test;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * Created by user on 6/26/2015.
- */
 public class CoursesDAOTest {
 
     private CourseDAO dao;
@@ -28,7 +25,7 @@ public class CoursesDAOTest {
     public void init() throws SQLException {
         dao = new CourseDAO();
         humanDAO = new HumanDAO();
-        student = new Student("Student", "student", "Johny", "Doe");
+        student = new Student("Student4Test", "student", "Johny", "Doe");
         teacher = new Teacher("username", "password", "John", "Doe");
         tempCourse = new Course("Test course", teacher);
     }
@@ -42,6 +39,16 @@ public class CoursesDAOTest {
         tempCourse = dao.get(tempCourse.getName());
         Assert.assertTrue(dao.remove(tempCourse));
         Assert.assertEquals(dao.getAll().size(), size);
+    }
+
+    @Test
+    public void collectFeedbackAndMarksForTest(){
+        Assert.assertEquals(dao.collectFeedbackAndMarksFor(student).size(), 0);
+    }
+
+    @Test
+    public void getAllCoursesOfTest(){
+        Assert.assertEquals(dao.getAllCoursesOf(teacher).size(), 0);
     }
 
     @Test
@@ -72,6 +79,7 @@ public class CoursesDAOTest {
         Assert.assertNotNull(dao.get(tempCourse.getName()));
         Assert.assertNotEquals(dao.get(tempCourse.getName()).getId(), 0);
         tempCourse = dao.get(tempCourse.getName());
+        Assert.assertEquals(tempCourse, dao.get(tempCourse.getId()));
         Assert.assertTrue(dao.remove(tempCourse));
     }
 
