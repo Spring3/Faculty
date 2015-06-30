@@ -43,8 +43,8 @@
         <option value="E">E</option>
         <option value="F">F</option>
       </select>
-      <input type="hidden" name="course" value="<%=currentCourse.getName()%>"/>
-      <input type="hidden" name="student" value="<%=student.getUsername()%>"/>
+      <input type="hidden" name="course" value="<%= currentCourse.getName()%>"/>
+      <input type="hidden" name="student" value="<%= student.getUsername()%>"/>
       <input type="hidden" name="command" value="feedback"/>
       <input type="submit" value="Submit"/>
     </form>

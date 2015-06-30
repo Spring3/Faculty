@@ -1,6 +1,3 @@
-<%@ page import="com.kpi.faculty.dao.CourseDAO" %>
-<%@ page import="com.kpi.faculty.dao.HumanDAO" %>
-<%@ page import="com.kpi.faculty.models.Human" %>
 <%@ page import="com.kpi.faculty.models.Course" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Map" %>
@@ -13,9 +10,9 @@
   </head>
 
   <%
-    CourseDAO courseDAO = new CourseDAO();
-    HumanDAO humanDAO = new HumanDAO();
-    Human currentUser = humanDAO.get((String) session.getAttribute("username"));
+    if (session.getAttribute("username") == null){
+      response.sendRedirect(Config.getInstance().getValue(Config.LOGIN));
+    }
   %>
   <body style="text-align:center;">
   <br>
@@ -25,31 +22,27 @@
     </form>
 
   <div class="info">
-    <h2><%= currentUser%></h2>
-    <h4>Username: <%= currentUser.getUsername()%></h4>
-    <h4>Role: <%=currentUser.getRole().name()%></h4>
+    <h2>${requestScope.get("user")}</h2>
+    <h4>Username: ${requestScope.get("username")}</h4>
+    <h4>Role: ${requestScope.get("role")}</h4>
     <br>
   </div>
 
   <%
-    if (currentUser.getRole() == Human.Role.STUDENT){
+    if (request.getAttribute("role").equals("STUDENT")){
   %>
     <div class="feedback">
     <h3>Feedback</h3>
     <%
-      int index = 0;
-      List<Course> enrolledCourses = courseDAO.getAllCoursesFor(currentUser);
-      Map<String, String> markAndFeedback = courseDAO.collectFeedbackAndMarksFor(currentUser);
-      for (Map.Entry<String, String> feedback : markAndFeedback.entrySet()){
-        if (feedback.getKey() != null){
+      int i = 0;
+      for (Map.Entry<String, String> feedback : ((Map<String, String>) request.getAttribute("markAndFeedback")).entrySet()){
     %>
-    <h4>Feedback from: <%= enrolledCourses.get(index).getTeacher() + " on course " + enrolledCourses.get(index).getName()%></h4>
+    <h4>Feedback from: <%= ((List<Course>)request.getAttribute("courses")).get(i).getTeacher() + " on course " + ((List<Course>)request.getAttribute("courses")).get(i).getName()%></h4>
     <h5>Mark: <%= feedback.getKey()%></h5>
     <p><%= feedback.getValue()%></p>
     <br>
     <%
-          index ++;
-        }
+          i ++;
       }
     %>
     </div>
@@ -58,9 +51,13 @@
       <h3>Courses you have enrolled on</h3>
       <div class="enrolled">
         <%
-          for (Course course : enrolledCourses){
+          for (Course course : ((List<Course>)request.getAttribute("courses"))){
         %>
-          <a href="<%=Config.getInstance().getValue(Config.LOBBY)%>?course=<%=course.getName()%>"><%= course.getName() + " (" + course.getTeacher() + ") "%></a>
+          <form action="/dispatcher" method="get">
+            <input type="hidden" name="course" value="<%=course.getName()%>"/>
+            <input type="hidden" name="command" value="redirectToLobby">
+            <input type="submit" value="<%=course.getName()%>"/>
+          </form>
           <form action="/dispatcher" method="post">
             <input type="hidden" name="course" value="<%=course.getName()%>"/>
             <input type="hidden" name="command" value="unenroll"/>
@@ -72,17 +69,23 @@
         %>
       </div>
       <br>
-      <a href="<%=Config.getInstance().getValue(Config.COURSES)%>"><input type="button" value="Find more"/></a>
+      <form action="/dispatcher" method="get">
+        <input type="hidden" name="command" value="redirectToCourses">
+        <input type="submit" value="Find more"/>
+      </form>
     </div>
 
   <%
     }
     else{
-      List<Course> courses = courseDAO.getAllCoursesOf(currentUser);
-      for (Course course : courses){
+      for (Course course : (List<Course>) request.getAttribute("courses")){
   %>
 
-  <a href="<%=Config.getInstance().getValue(Config.LOBBY)%>?course=<%=course.getName()%>"><%= course.getName()%></a>
+  <form action="/dispatcher" method="get">
+    <input type="hidden" name="course" value="<%=course.getName()%>"/>
+    <input type="hidden" name="command" value="redirectToLobby">
+    <input type="submit" value="<%=course.getName()%>"/>
+  </form>
   <br>
 
   <%
