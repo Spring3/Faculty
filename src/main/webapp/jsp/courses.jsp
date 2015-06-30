@@ -1,8 +1,4 @@
-<%@ page import="com.kpi.faculty.models.Course" %>
-<%@ page import="com.kpi.faculty.models.Human" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.kpi.faculty.dao.HumanDAO" %>
-<%@ page import="com.kpi.faculty.dao.CourseDAO" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.kpi.faculty.util.Config" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page pageEncoding="UTF-8" %>
@@ -13,21 +9,25 @@
   <body style="text-align:center;">
   <h3>Available courses</h3>
   <%
-    CourseDAO courseDAO = new CourseDAO();
-    HumanDAO humanDAO = new HumanDAO();
-    Human currentUser = humanDAO.get((String) session.getAttribute("username"));
-    List<Course> availableCourses = courseDAO.getAllAvailableCoursesFor(currentUser);
-    for (Course course : availableCourses){
+    if (session.getAttribute("username") == null){
+      response.sendRedirect(Config.getInstance().getValue(Config.LOGIN));
+    }
   %>
+
+  <c:forEach var="course" items="${availableCourses}">
+
+    <form action="/dispatcher" method="get">
+      <input type="hidden" name="command" value="redirectToLobby"/>
+      <input type="hidden" name="course" value="${course}"/>
+      <input type="submit" value="${course} (${course.teacher.name})"/>
+    </form>
     <form action="/dispatcher" method="post">
-      <a href="<%= Config.getInstance().getValue(Config.LOBBY) + "?course=" + course.getName()%>"><%= course.getName() + " (" + course.getTeacher() + ") "%></a>
-      <input type="hidden" name="name" value="<%=course.getName()%>"/>
+      <input type="hidden" name="name" value="${course}"/>
       <input type="hidden" name="command" value="enroll"/>
       <input type="submit" value="Enroll"/>
       <br>
     </form>
-  <%
-    }
-  %>
+
+  </c:forEach>
   </body>
 </html>

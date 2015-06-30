@@ -8,9 +8,7 @@
   <body style="text-align:center;">
 
     <%
-      if (session.getAttribute("username") == null){
-      }
-      else {
+      if (session.getAttribute("username") != null){
         response.sendRedirect(Config.getInstance().getValue(Config.PROFILE));
       }
       String error = (String)request.getAttribute("error");

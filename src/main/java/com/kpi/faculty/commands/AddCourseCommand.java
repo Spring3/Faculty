@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by user on 6/27/2015.
  */
-public class AddCourseCommand implements ICommand {
+public class AddCourseCommand extends RedirectToProfileExtention implements ICommand {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = null;
         CourseDAO courseDAO = new CourseDAO();
@@ -24,6 +24,7 @@ public class AddCourseCommand implements ICommand {
         Course course = new Course(courseName, teacher);
         if (courseDAO.create(course)){
             page = Config.getInstance().getValue(Config.PROFILE);
+            addRequestContent(request, teacher);
         }
         else{
             response.sendError(500, "Unable to create a course");

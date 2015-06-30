@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by user on 6/27/2015.
  */
-public class UnenrollCommand implements ICommand {
+public class UnenrollCommand extends RedirectToProfileExtention implements ICommand {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = null;
         CourseDAO courseDAO = new CourseDAO();
@@ -24,6 +24,7 @@ public class UnenrollCommand implements ICommand {
         Course course = courseDAO.get(courseName);
         if (courseDAO.unenroll(course, student)){
             page = Config.getInstance().getValue(Config.PROFILE);
+            addRequestContent(request, student);
         }
         else{
             response.sendError(500, "Unable to unenroll student.");

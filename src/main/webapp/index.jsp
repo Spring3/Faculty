@@ -35,7 +35,7 @@
       <input type="hidden" name="command" value="login"/>
       <br>
       <input type="submit" value="Sign in"/>
-      <a href=""><input type="button" value="Sign up"/></a>
+      <a href="./jsp/reg.jsp"><input type="button" value="Sign up"/></a>
     </form>
 
 

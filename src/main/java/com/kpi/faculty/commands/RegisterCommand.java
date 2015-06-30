@@ -16,7 +16,7 @@ import java.io.IOException;
 /*
     Registration command handler
  */
-public class RegisterCommand implements ICommand {
+public class RegisterCommand extends RedirectToProfileExtention implements ICommand {
 
     private static final Logger logger = Logger.getLogger(RegisterCommand.class);
     private HumanDAO humanDAO = new HumanDAO();
@@ -36,26 +36,33 @@ public class RegisterCommand implements ICommand {
 
         if (username != null && password1 != null && password2 != null && name != null && lastName != null)
         {
-            if (password1.equals(password2)){
-                Human user = humanDAO.get(username);
-                if (user == null){
-                    user = isTeacher ? new Teacher(username, password1, name, lastName) : new Student(username, password1, name, lastName);
-                    humanDAO.create(user);
-                    HttpSession session = request.getSession();
-                    session.setAttribute("username", username);
-                    page = Config.getInstance().getValue(Config.PROFILE);
-                    logger.info("User successfully registered");
-                }
-                else{
-                    request.setAttribute("error", USER_EXISTS);
+            if (!username.isEmpty() && !password1.isEmpty() && !password2.isEmpty() && !name.isEmpty() && !lastName.isEmpty()) {
+
+                if (password1.equals(password2)) {
+                    Human user = humanDAO.get(username);
+                    if (user == null) {
+                        user = isTeacher ? new Teacher(username, password1, name, lastName) : new Student(username, password1, name, lastName);
+                        humanDAO.create(user);
+                        HttpSession session = request.getSession();
+                        session.setAttribute("username", username);
+                        page = Config.getInstance().getValue(Config.PROFILE);
+                        addRequestContent(request, user);
+                        logger.info("User successfully registered");
+                    } else {
+                        request.setAttribute("error", USER_EXISTS);
+                        page = Config.getInstance().getValue(Config.REGISTER);
+                        logger.error(String.format("Filter: error detected -> %s", USER_EXISTS));
+                    }
+                } else {
+                    request.setAttribute("error", PASS_NOT_MATCH);
                     page = Config.getInstance().getValue(Config.REGISTER);
-                    logger.error(String.format("Filter: error detected -> %s", USER_EXISTS));
+                    logger.error(String.format("Filter: error detected -> %s", PASS_NOT_MATCH));
                 }
             }
             else{
-                request.setAttribute("error", PASS_NOT_MATCH);
+                request.setAttribute("error", NULLVALUE_ERROR);
                 page = Config.getInstance().getValue(Config.REGISTER);
-                logger.error(String.format("Filter: error detected -> %s", PASS_NOT_MATCH));
+                logger.error(String.format("Filter: error detected -> %s", NULLVALUE_ERROR));
             }
         }
         else{
@@ -66,4 +73,6 @@ public class RegisterCommand implements ICommand {
 
         return page;
     }
+
+
 }

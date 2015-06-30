@@ -10,6 +10,7 @@ import java.io.IOException;
 public class LogoutCommand implements ICommand {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getSession().removeAttribute("username");
+        request.getSession().invalidate();
         return Config.getInstance().getValue(Config.LOGIN);
     }
 }

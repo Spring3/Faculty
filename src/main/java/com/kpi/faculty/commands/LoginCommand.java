@@ -2,6 +2,7 @@ package com.kpi.faculty.commands;
 
 import com.kpi.faculty.dao.CourseDAO;
 import com.kpi.faculty.dao.HumanDAO;
+import com.kpi.faculty.dto.StudentInfo;
 import com.kpi.faculty.models.Course;
 import com.kpi.faculty.models.Human;
 import com.kpi.faculty.util.Config;
@@ -13,13 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /*
     Login command handler
  */
-public class LoginCommand implements ICommand {
+public class LoginCommand extends RedirectToProfileExtention implements ICommand {
 
     // Request parameter names
     private static final String USERNAME = "username";
@@ -71,26 +73,5 @@ public class LoginCommand implements ICommand {
         request.setAttribute("error", ERROR_LOGIN);
         logger.error(ERROR_LOGIN);
         return Config.getInstance().getValue(Config.LOGIN);
-    }
-
-    private void addRequestContent(HttpServletRequest request, Human user){
-        request.setAttribute("user", user);
-        request.setAttribute("role", user.getRole().name());
-        CourseDAO courseDAO = new CourseDAO();
-        if (user.getRole() == Human.Role.STUDENT){
-            List<Course> enrolledCourses = courseDAO.getAllCoursesFor(user);
-            Map<String, String> markAndFeedback = courseDAO.collectFeedbackAndMarksFor(user);
-            for (Map.Entry<String, String> entry : markAndFeedback.entrySet()){
-                if (entry.getKey() == null){
-                    markAndFeedback.remove(entry.getKey());
-                }
-            }
-            request.setAttribute("courses", enrolledCourses);
-            request.setAttribute("markAndFeedback", markAndFeedback);
-        }
-        else{
-            List<Course> courses = courseDAO.getAllCoursesOf(user);
-            request.setAttribute("courses", courses);
-        }
     }
 }

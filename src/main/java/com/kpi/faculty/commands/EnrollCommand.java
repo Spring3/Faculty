@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by user on 6/27/2015.
  */
-public class EnrollCommand implements ICommand {
+public class EnrollCommand extends RedirectToProfileExtention implements ICommand {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = null;
         CourseDAO dao = new CourseDAO();
@@ -24,6 +24,7 @@ public class EnrollCommand implements ICommand {
         Course course = dao.get(courseName);
         if (dao.enroll(course, student)){
             page = Config.getInstance().getValue(Config.PROFILE);
+            addRequestContent(request, student);
         }
         else{
             response.sendError(500, "Failed to enroll a student on course " + courseName);

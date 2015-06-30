@@ -27,7 +27,7 @@ public class FeedbackCommand implements ICommand {
         Human student = humanDAO.get(studentUsername);
         Course course = courseDAO.get(courseName);
         if (courseDAO.saveFeedback(feedback, mark, student,course)){
-            page = Config.getInstance().getValue(Config.LOBBY)+ "?course=" + courseName;
+            page = new RedirectToLobbyCommand().execute(request, response);
         }
         else{
             response.sendError(500, "Failed to save feedback.");

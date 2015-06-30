@@ -23,7 +23,8 @@ public final class DispatcherHelper {
         commands.put("addCourse", new AddCourseCommand());
         commands.put("logout", new LogoutCommand());
         commands.put("feedback", new FeedbackCommand());
-
+        commands.put("redirectToLobby", new RedirectToLobbyCommand());
+        commands.put("redirectToCourses", new RedirectToCoursesCommand());
     }
 
     //thread-safe singleton
