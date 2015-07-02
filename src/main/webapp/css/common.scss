@@ -1,0 +1,52 @@
+$color-main: #3B3738;
+$color-smoothe: #5f5f5f;
+$font-main: Helvetica;
+$background-main: #81D4FA;
+$border-color: #B3E5FC;
+$color-success: #00BFA5;
+
+input:not([type]), input[type=password], input[type=text]{
+  padding: 7px 7px;
+  border-color: #dadada;
+  border-width:0px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: $color-smoothe;
+}
+
+.btn{
+  padding: 13px 15px;
+  background: #fff;
+  border-width: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-smoothe;
+  border-color: $border-color;
+}
+
+.btn:hover{
+  border-color: $color-success;
+  color: white;
+  background-color: $color-success;
+  cursor: pointer;
+}
+
+.error{
+  background: #F44336;
+  padding: 5px 0px;
+  border-radius: 3px;
+  color: white;
+}
+
+.row{
+  margin: 5px 0px 5px 0px;
+  vertical-align: middle;
+}
+
+hr{
+  background-color: $color-main;
+  border-width: 0px;
+  border-color: $color-main;
+}

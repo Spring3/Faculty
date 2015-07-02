@@ -1,0 +1,43 @@
+@import 'common';
+
+
+body{
+  background-color: #009688;
+  font-family: $font-main;
+  color: $color-main;
+  text-align:center;
+  -webkit-appearance:none;
+  .loginForm{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: $background-main;
+    display:inline-block;
+    padding: 30px 30px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow:    0px 0px 25px 0px rgba(50, 50, 50, 0.39);
+    box-shadow:         0px 0px 25px 0px rgba(50, 50, 50, 0.39);
+    label{
+      text-align:left;
+      font-weight: 600;
+      color: $color-smoothe;
+    }
+
+    .title{
+      text-align:left;
+      max-width: 100%;
+      margin-top: 0px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .buttons{
+      margin-top: 10px;
+      text-align:center;
+    }
+  }
+
+  form{
+    margin: 0px;
+  }
+}

@@ -1,0 +1,90 @@
+input:not([type]), input[type=password], input[type=text] {
+  padding: 7px 7px;
+  border-color: #dadada;
+  border-width: 0px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #5f5f5f; }
+
+.btn {
+  padding: 13px 15px;
+  background: #fff;
+  border-width: 1px;
+  border-radius: 2px;
+  border-style: solid;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f5f5f;
+  border-color: #B3E5FC; }
+
+.btn:hover {
+  border-color: #00BFA5;
+  color: white;
+  background-color: #00BFA5;
+  cursor: pointer; }
+
+.error {
+  background: #F44336;
+  padding: 5px 0px;
+  border-radius: 3px;
+  color: white; }
+
+.row {
+  margin: 5px 0px 5px 0px;
+  vertical-align: middle; }
+
+hr {
+  background-color: #3B3738;
+  border-width: 0px;
+  border-color: #3B3738; }
+
+body {
+  font-family: Helvetica;
+  background-color: #009688; }
+  body .formReg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: #81D4FA;
+    display: inline-block;
+    padding: 30px 30px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39);
+    box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39); }
+    body .formReg .title {
+      text-align: left;
+      font-weight: 600;
+      font-size: 20px; }
+    body .formReg label {
+      float: left;
+      text-align: left;
+      color: #5f5f5f;
+      font-weight: 600;
+      vertical-align: middle; }
+    body .formReg .buttons {
+      text-align: center; }
+  body form {
+    margin: 0px; }
+  body label .teacher {
+    text-align: right;
+    float: right !important;
+    line-height: 2; }
+
+.row {
+  text-align: right;
+  line-height: 2; }
+
+.inlined {
+  display: inline-block; }
+
+input[type=checkbox] {
+  float: right;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  line-height: 2;
+  position: relative;
+  top: 5px; }
+
+/*# sourceMappingURL=reg.css.map */
