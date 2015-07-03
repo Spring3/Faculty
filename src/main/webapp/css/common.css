@@ -38,4 +38,21 @@ hr {
   border-width: 0px;
   border-color: #3B3738; }
 
+.url {
+  font-size: 18px;
+  background: none;
+  border-width: 0;
+  border: none;
+  color: blue;
+  text-decoration: underline; }
+
+.url:hover {
+  cursor: pointer; }
+
+.inlined {
+  display: inline; }
+
+.centered {
+  text-align: center; }
+
 /*# sourceMappingURL=common.css.map */

@@ -1,0 +1,25 @@
+@import 'common';
+
+body{
+  font-family: Helvetica;
+  color: $color-smoothe;
+  text-align:center;
+
+  h3{
+    color: $color-main;
+  }
+
+  .leftSide{
+    float:left;
+    position:fixed;
+    top: 30%;
+    max-width: 30%;
+    width:30%;
+  }
+
+  .rightSide{
+    float: right;
+    max-width:70%;
+    width:70%;
+  }
+}

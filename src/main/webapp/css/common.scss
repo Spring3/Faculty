@@ -2,6 +2,7 @@ $color-main: #3B3738;
 $color-smoothe: #5f5f5f;
 $font-main: Helvetica;
 $background-main: #81D4FA;
+$background-dark: #009688;
 $border-color: #B3E5FC;
 $color-success: #00BFA5;
 
@@ -49,4 +50,25 @@ hr{
   background-color: $color-main;
   border-width: 0px;
   border-color: $color-main;
+}
+
+.url{
+  font-size: 18px;
+  background: none;
+  border-width: 0;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+}
+
+.url:hover{
+  cursor: pointer;
+}
+
+.inlined{
+  display:inline;
+}
+
+.centered{
+  text-align:center;
 }

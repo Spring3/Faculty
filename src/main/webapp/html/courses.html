@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="../css/courses.css">
+  </head>
+  <body style="text-align:center;">
+  <h3>Available courses</h3>
+    <div class="row">
+      <form class="inlined" action="/dispatcher" method="get">
+        <input type="hidden" name="command" value="redirectToLobby"/>
+        <input type="hidden" name="course" value="${course}"/>
+        <input class="url" type="submit" value="${course} (${course.teacher.name})"/>
+      </form>
+      <form class="inlined" action="/dispatcher" method="post">
+        <input type="hidden" name="name" value="${course}"/>
+        <input type="hidden" name="command" value="enroll"/>
+        <input class="btn" type="submit" value="Enroll"/>
+      </form>
+    </div>
+
+  <script src="../js/jqeury-2.1.4.min.js"></script>
+  <script src="../js/courses.js"></script>
+  </body>
+</html>

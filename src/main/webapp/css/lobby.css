@@ -56,36 +56,10 @@ hr {
   text-align: center; }
 
 body {
-  background-color: #009688;
-  font-family: Helvetica;
-  color: #3B3738;
-  text-align: center;
-  -webkit-appearance: none; }
-  body .loginForm {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background: #81D4FA;
-    display: inline-block;
-    padding: 30px 30px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39);
-    box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.39); }
-    body .loginForm label {
-      text-align: left;
-      font-weight: 600;
-      color: #5f5f5f; }
-    body .loginForm .title {
-      text-align: left;
-      max-width: 100%;
-      margin-top: 0px;
-      font-weight: 600;
-      font-size: 20px; }
-    body .loginForm .buttons {
-      margin-top: 10px;
-      text-align: center; }
-  body form {
-    margin: 0px; }
+  color: #5f5f5f;
+  font-family: Helvetica; }
 
-/*# sourceMappingURL=index.css.map */
+h3 {
+  color: #3B3738; }
+
+/*# sourceMappingURL=lobby.css.map */
