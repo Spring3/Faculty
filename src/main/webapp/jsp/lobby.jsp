@@ -10,17 +10,21 @@
       }
     %>
     <title>${course}</title>
+    <link rel="stylesheet" href="../css/lobby.css">
   </head>
-  <body style="text-align:center;">
+  <body>
 
-  <h3>${course}</h3>
-  <h3>Teacher: ${course.teacher}</h3>
-  <h4>Welcome to the course room.</h4>
-  <p>Here you can find all the material we will need while going through this course.</p>
+  <div class="row centered">
+    <h3>${course}</h3>
+    <h3>Teacher: ${course.teacher}</h3>
+    <h4>Welcome to the course room.</h4>
+    <p>Here you can find all the material we will need while going through this course.</p>
+  </div>
 
   <c:if test="${role == 'TEACHER'}">
-  <h3>Enrolled students:</h3>
+  <h3 class="centered">Enrolled students:</h3>
     <c:forEach var="student" items="${studentInfos}">
+    <div class="row centered">
         <form action="/dispatcher" method="post">
           <label><b>${student.username}</b></label>
           <input type="text" name="feedback" placeholder="Feedback" value="${student.feedback == null ? "" : student.feedback}"/>
@@ -36,11 +40,15 @@
           <input type="hidden" name="course" value="${course}"/>
           <input type="hidden" name="student" value="${student.username}"/>
           <input type="hidden" name="command" value="feedback"/>
-          <input type="submit" value="Submit"/>
+          <input class="btn" type="submit" value="Submit"/>
         </form>
+      </div>
     </c:forEach>
 
   </c:if>
+
+    <script src="../js/jqeury-2.1.4.min.js"></script>
+    <script src="../js/lobby.js"></script>
 
   </body>
 </html>

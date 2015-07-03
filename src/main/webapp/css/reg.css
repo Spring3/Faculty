@@ -57,7 +57,8 @@ hr {
 
 body {
   font-family: Helvetica;
-  background-color: #009688; }
+  background-color: #009688;
+  text-align: center; }
   body .formReg {
     position: absolute;
     left: 50%;

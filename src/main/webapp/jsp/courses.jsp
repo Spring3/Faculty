@@ -5,8 +5,9 @@
 <html>
   <head>
     <title>Courses</title>
+    <link rel="stylesheet" href="../css/courses.css">
   </head>
-  <body style="text-align:center;">
+  <body>
   <h3>Available courses</h3>
   <%
     if (session.getAttribute("username") == null){
@@ -16,18 +17,23 @@
 
   <c:forEach var="course" items="${availableCourses}">
 
-    <form action="/dispatcher" method="get">
-      <input type="hidden" name="command" value="redirectToLobby"/>
-      <input type="hidden" name="course" value="${course}"/>
-      <input type="submit" value="${course} (${course.teacher.name})"/>
-    </form>
-    <form action="/dispatcher" method="post">
-      <input type="hidden" name="name" value="${course}"/>
-      <input type="hidden" name="command" value="enroll"/>
-      <input type="submit" value="Enroll"/>
-      <br>
-    </form>
+    <div class="row">
+      <form class="inlined" action="/dispatcher" method="get">
+        <input type="hidden" name="command" value="redirectToLobby"/>
+        <input type="hidden" name="course" value="${course}"/>
+        <input class="url" type="submit" value="${course} (${course.teacher.name})"/>
+      </form>
+      <form class="inlined" action="/dispatcher" method="post">
+        <input type="hidden" name="name" value="${course}"/>
+        <input type="hidden" name="command" value="enroll"/>
+        <input class="btn" type="submit" value="Enroll"/>
+      </form>
+    </div>
 
   </c:forEach>
+
+
+    <script src="../js/jqeury-2.1.4.min.js"></script>
+    <script src="../js/courses.js"></script>
   </body>
 </html>
